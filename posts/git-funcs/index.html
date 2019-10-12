@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang='en'><head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='Many developers, new and old, curse git from the depths of their bowels. However, once you get past the learning curve, it&rsquo;s surprisingly fun to tinker and automate common git tasks. The following are a collection of bash functions and aliases that accelerate my workflow considerably:
+glS &ldquo;git pickaxe with filter&rdquo;
+A lot of magic occurs when you combine fuzzy finders with git. But first,
+@@@@@@@ @^_^@@@@@ @@@@@@@ WAKE UP SHEEPLE WAKE UP SHEEPLE WAKE UP SHEEPLE  You can search the diffs of all your commits with git log -G or git log -S.'>
+<meta name='theme-color' content='#44ccff'>
+
+<meta property='og:title' content='woah, git just wanna have func • Super Pork Chop'>
+<meta property='og:description' content='Many developers, new and old, curse git from the depths of their bowels. However, once you get past the learning curve, it&rsquo;s surprisingly fun to tinker and automate common git tasks. The following are a collection of bash functions and aliases that accelerate my workflow considerably:
+glS &ldquo;git pickaxe with filter&rdquo;
+A lot of magic occurs when you combine fuzzy finders with git. But first,
+@@@@@@@ @^_^@@@@@ @@@@@@@ WAKE UP SHEEPLE WAKE UP SHEEPLE WAKE UP SHEEPLE  You can search the diffs of all your commits with git log -G or git log -S.'>
+<meta property='og:url' content='http://www.example.com/posts/git-funcs/'>
+<meta property='og:site_name' content='Super Pork Chop'>
+<meta property='og:type' content='article'><meta property='article:section' content='posts'><meta property='article:tag' content='git'><meta property='article:published_time' content='2019-10-11T00:00:32-04:00'/><meta property='article:modified_time' content='2019-10-11T00:00:32-04:00'/><meta name='twitter:card' content='summary'>
+
+<meta name="generator" content="Hugo 0.58.2" />
+
+  <title>woah, git just wanna have func • Super Pork Chop</title>
+  <link rel='canonical' href='http://www.example.com/posts/git-funcs/'>
+  
+  
+  <link rel='icon' href='/favicon.ico'>
+<link rel='stylesheet' href='/assets/css/main.fb20af92.css'><link rel='stylesheet' href='/css/custom.css'><style>
+:root{--color-accent:#44ccff;}
+</style>
+
+  
+
+</head>
+<body class='page type-posts'>
+
+  <div class='site'><a class='screen-reader-text' href='#content'>Skip to Content</a><div class='main'><nav id='main-menu' class='menu main-menu' aria-label='Main Menu'>
+  <div class='container'>
+    
+    <ul><li class='item'>
+        <a href='https://dp12.github.io/' class="repository">
+          <span>Home</span>
+        </a>
+      </li><li class='item'>
+        <a href='/about/' class="">
+          <span>About</span>
+        </a>
+      </li></ul>
+  </div>
+</nav><div class='header-widgets'>
+        <div class='container'>
+    
+    <style>.widget-breadcrumbs li:after{content:'\2f '}</style>
+  <section class='widget widget-breadcrumbs sep-after'>
+    <nav id='breadcrumbs'>
+      <ol><li><a href='/'>Super Pork Chop</a></li><li><a href='/posts/'>Posts</a></li><li><span>woah, git just wanna have func</span></li></ol>
+    </nav>
+  </section></div>
+      </div>
+
+      <header id='header' class='header site-header'>
+        <div class='container sep-after'>
+          <div class='header-info'><p class='site-title title'>Super Pork Chop</p><p class='desc site-desc'>emacs, hacking, and all things bright and beautiful</p>
+          </div>
+        </div>
+      </header>
+
+      <main id='content'>
+
+
+<article lang='en' class='entry'>
+  <header class='header entry-header'>
+  <div class='container sep-after'>
+    <div class='header-info'>
+      <h1 class='title'>woah, git just wanna have func</h1>
+      
+
+    </div>
+    <div class='entry-meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader-text'>Posted on </span>
+  <time class='entry-date' datetime='2019-10-11T00:00:32-04:00'>2019, Oct 11</time>
+</span>
+
+  
+  
+<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/>
+  
+</svg>
+5 mins read
+</span>
+
+
+  
+  
+</div>
+
+
+  </div>
+</header>
+
+  
+  
+
+  <div class='container entry-content'>
+  
+
+<p>Many developers, new and old, curse git from the depths of their bowels. However, once you get past the learning curve, it&rsquo;s surprisingly fun to tinker and automate common git tasks. The following are a collection of bash functions and aliases that accelerate my workflow considerably:</p>
+
+<h2 id="gls">glS</h2>
+
+<p><em>&ldquo;git pickaxe with filter&rdquo;</em></p>
+
+<p>A lot of magic occurs when you combine fuzzy finders with git.
+But first,</p>
+
+<pre><code>@@@@@@@
+@^_^@@@@@
+@@@@@@@
+WAKE UP SHEEPLE
+WAKE UP SHEEPLE
+WAKE UP SHEEPLE
+</code></pre>
+
+<p>You can search the diffs of all your commits with <code>git log -G</code> or <code>git log -S</code>.</p>
+
+<p><em>The author continues yelling hoarsely about the git log --pickaxe option as HR drags him away.</em></p>
+
+<p>One of the less well-known, but most useful git log features is the pickaxe option, which lets you search the actual code changes in all commits. To make it more convenient to use, the following function adds the <code>--stat</code> option to see which files were changed. And to filter out unwanted commits, you can use the <code>--grep</code> and <code>--invert-grep</code> options. Once you identify a commit you want to see, you can easily view its changes by running <code>git show &lt;commit hash&gt;</code></p>
+
+<pre><code># Example:
+#     glS &quot;//specific comment somewhere in the code&quot;
+#     glS &quot;important_var_with_specific_name =&quot;
+#
+# Definition:
+glS () {
+    git log --stat -S$1 --grep=&quot;Whitespace cleanup&quot; --invert-grep
+}
+</code></pre>
+
+<h2 id="gcz-glz">gcz/glz</h2>
+
+<p><em>&ldquo;interactive fuzzy git checkout/log&rdquo;</em></p>
+
+<p>Descriptive names for branches can get unbearably long. By piping the git branch output through fzf or fzy, you can fuzzy select the branch you want from a list, sorted by when branches were last updated.</p>
+
+<pre><code>alias gcz='git checkout $(git branch --sort=&quot;-authordate&quot; | fzy)'
+alias glz='git log $(git branch --sort=&quot;-authordate&quot; | fzy)'
+</code></pre>
+
+<h2 id="gla">gla</h2>
+
+<p><em>&ldquo;git log by author, simplified&rdquo;</em></p>
+
+<p>Many times, it&rsquo;s useful to see a list of all of the commits from a particular person. The following function allows you to specify a particular author. If no author is specified, it defaults to showing commits made by you.</p>
+
+<pre><code># Example:
+#     gla jsmith
+#
+# Definition:
+gla() {
+  cmd=&quot;git log --author=${1:-$(whoami)}&quot;
+  printf &quot;$cmd\n\n&quot;; eval &quot;$cmd&quot;
+}
+</code></pre>
+
+<h2 id="gpb">gPb</h2>
+
+<p><em>&ldquo;git push current branch&rdquo;</em></p>
+
+<p>For the same reasons as above, it&rsquo;s nice to have a faster way of pushing out branches with long names. This command will push out the current branch you&rsquo;re on (assuming your remote is origin). To delete the branch, just append <code>--delete</code>.</p>
+
+<pre><code># Example:
+#     gPb --delete
+#
+# Definition:
+alias gPb='git push origin $(git rev-parse --abbrev-ref HEAD)'
+</code></pre>
+
+<h2 id="gshf">gshf</h2>
+
+<p><em>&ldquo;git show file at old commit hash&rdquo;</em></p>
+
+<p>A lot of times I want to enter the time machine and see what a file looked like sometime in history. The following function accepts a git commit hash and file name, then lets you fuzzily select the desired file from the possible candidates. Using git show, it displays the file at that revision.</p>
+
+<p>You can even write the output to a file so your favorite editor can stomach it.</p>
+
+<pre><code># Example:
+# gshf ca09238 myfile.c &gt; myfile-old.c
+#
+# Definition:
+gshf() {
+  if [ &quot;$#&quot; -eq 2 ]; then
+    cd &quot;$(git rev-parse --show-toplevel)&quot;
+    # Adjust the ripgrep file extensions below to the files desired.
+    local file=$(git ls-tree -r &quot;$1&quot; --name-only | rg &quot;$2&quot; | rg '\.c$|\.h$|\.cpp$|\.hpp$|\.py' | fzy)
+    local cmd=&quot;git show $1:./${file}&quot;
+    echo &quot;$cmd&quot; &amp;&amp; eval &quot;$cmd&quot;
+  else
+    echo &quot;Usage: gshf &lt;hash&gt; &lt;filename&gt;&quot;
+  fi
+}
+</code></pre>
+
+<h2 id="gspr">gspr</h2>
+
+<p><em>&ldquo;git save, pull, and restore&rdquo;</em></p>
+
+<p>Developers often want to pull from a central repo, but are stymied by messages about &ldquo;Unstaged changes&hellip;&rdquo;. The traditional way to deal with this is to stash your local changes, <code>git pull --rebase</code>, and finally <code>git stash pop</code> to restore your stashed changes. This command handles it in a single step. If no stashing is needed, it just does the rebase.</p>
+
+<pre><code>gspr() {
+  if ! git diff-index --quiet HEAD --; then
+    echo &quot;git stash save; git pull --rebase; git stash pop&quot;
+    git stash save; git pull --rebase; git stash pop
+  else
+    echo &quot;git pull --rebase&quot;
+    git pull --rebase
+  fi
+}
+</code></pre>
+
+<h2 id="gcfu">gcfu</h2>
+
+<p><em>&ldquo;configure git username and email quickly&rdquo;</em></p>
+
+<p>One thing I occasionally find irksome is configuring a new git repo with my user name and email. It seems to take a disproportionate amount of typing for what is really a small task. This command lets you do the same thing with just 4 keystrokes, followed by your name and email.</p>
+
+<pre><code># Example:
+#     gcfu &quot;dp12&quot; &quot;dp12@myemail.com&quot;
+#
+# Definition:
+gcfu() {
+  if [ &quot;$#&quot; -eq 2 ]; then
+    cmd1=&quot;git config --local user.name \&quot;$1\&quot;&quot;
+    cmd2=&quot;git config --local user.email \&quot;$2\&quot;&quot;
+    echo -n &quot;Exec \n$cmd1\n$cmd2 [y/n]? &quot;
+    read reply
+    if [ $reply != &quot;${reply#[Yy]}&quot; ]; then
+      eval &quot;$cmd1&quot;
+      eval &quot;$cmd2&quot;
+      printf &quot;\ngit config --local [user] is now:&quot;
+      git config --local --get-regexp user
+    fi
+  else
+    echo &quot;Usage: gcfu &lt;username&gt; &lt;email&gt;&quot;
+  fi
+}
+</code></pre>
+
+<h1 id="bonus">BONUS:</h1>
+
+<h2 id="grrauth">grrauth</h2>
+
+<p><em>&ldquo;Rewrite author/committer in history, the bash function way!&rdquo;</em></p>
+
+<p>Have you ever misconfigured your name and email and then made a series of commits? Github supplies a <a href="https://help.github.com/articles/changing-author-info/" target="_blank">handy script</a> to fix it for you. But if you want to execute the script, you have to copy it to every repo you want to do the change in and then execute it. I think it&rsquo;s much easier to deploy as a bash function, so I converted the script into one. If no arguments other than the old email are given, it pulls the new username and email from your git config.</p>
+
+<pre><code># Example:
+#     grrauth wrong-email@mymail.com
+#
+# Definition:
+grrauth() {
+  if [ &quot;$#&quot; -gt 0 ]; then
+    export OLD_EMAIL=&quot;${1:-$(git config user.email)}&quot;
+    export CORRECT_EMAIL=&quot;${2:-$(git config user.email)}&quot;
+    export CORRECT_NAME=&quot;${3:-$(git config user.name)}&quot;
+    echo &quot;Set commits with email \&quot;$OLD_EMAIL\&quot; to author/committer:&quot;
+    echo &quot;\&quot;$CORRECT_NAME &lt;$CORRECT_EMAIL&gt;\&quot;? [Y]es/[N]o&quot;
+    read REPLY
+    if [[ $REPLY =~ ^[Yy] ]]; then
+      git filter-branch -f --env-filter \
+      'if [ &quot;$GIT_COMMITTER_EMAIL&quot; = &quot;${OLD_EMAIL}&quot; ]
+      then
+          export GIT_COMMITTER_NAME=&quot;${CORRECT_NAME}&quot;
+          export GIT_COMMITTER_EMAIL=&quot;${CORRECT_EMAIL}&quot;
+      fi
+      if [ &quot;$GIT_AUTHOR_EMAIL&quot; = &quot;${OLD_EMAIL}&quot; ]
+      then
+          export GIT_AUTHOR_NAME=&quot;${CORRECT_NAME}&quot;
+          export GIT_AUTHOR_EMAIL=&quot;${CORRECT_EMAIL}&quot;
+      fi' --tag-name-filter cat -- --branches --tags
+    fi
+  else
+    echo &quot;Usage: grrauth &lt;old email&gt;&quot;
+    echo &quot;       grrauth &lt;old email&gt; &lt;new email&gt; &lt;new name&gt;&quot;
+  fi
+}
+</code></pre>
+
+</div>
+
+  
+<footer class='entry-footer'>
+  <div class='container sep-before'><div class='tags'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
+  <line x1="7" y1="7" x2="7" y2="7"/>
+  
+</svg>
+<span class='screen-reader-text'>Tags: </span><a class='tag' href='/tags/git/'>git</a></div>
+
+  </div>
+</footer>
+
+
+</article>
+
+
+
+
+      </main>
+
+      <footer id='footer' class='footer'>
+        <div class='container sep-before'><section class='widget widget-social_menu sep-after'><nav aria-label='Social Menu'>
+    <ul><li>
+        <a href='https://github.com/dp12' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Github account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://linkedin.com/in/daniel-ting-b5387951' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Linkedin account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+  <rect x="2" y="9" width="4" height="12"/>
+  <circle cx="4" cy="4" r="2"/>
+  
+</svg>
+</a>
+      </li></ul>
+  </nav>
+</section><div class='copyright'>
+  <p> &copy; 2019 Powered by Hugo and engimo </p>
+</div>
+
+        </div>
+      </footer>
+
+    </div>
+  </div><script>window.__assets_js_src ="/assets/js/"</script>
+
+<script src='http://www.example.com/assets/js/main.9e5c4cf4.js'></script><script src='/js/custom.js'></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

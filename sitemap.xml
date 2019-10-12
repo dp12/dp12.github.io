@@ -3,6 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://www.example.com/tags/git/</loc>
+    <lastmod>2019-10-11T00:00:32-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.example.com/posts/</loc>
+    <lastmod>2019-10-11T00:00:32-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.example.com/</loc>
+    <lastmod>2019-10-11T00:00:32-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.example.com/tags/</loc>
+    <lastmod>2019-10-11T00:00:32-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.example.com/posts/git-funcs/</loc>
+    <lastmod>2019-10-11T00:00:32-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://www.example.com/about/</loc>
   </url>
   
@@ -15,19 +40,11 @@
   </url>
   
   <url>
-    <loc>http://www.example.com/</loc>
-  </url>
-  
-  <url>
     <loc>http://www.example.com/page/</loc>
   </url>
   
   <url>
     <loc>http://www.example.com/series/</loc>
-  </url>
-  
-  <url>
-    <loc>http://www.example.com/tags/</loc>
   </url>
   
 </urlset>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Super Pork Chop</title>
-    <link>http://www.example.com/</link>
-    <description>Recent content on Super Pork Chop</description>
+    <title>Posts on Super Pork Chop</title>
+    <link>http://www.example.com/posts/</link>
+    <description>Recent content in Posts on Super Pork Chop</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Fri, 11 Oct 2019 00:00:32 -0400</lastBuildDate>
     
-	<atom:link href="http://www.example.com/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://www.example.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -20,16 +20,6 @@
 glS &amp;ldquo;git pickaxe with filter&amp;rdquo;
 A lot of magic occurs when you combine fuzzy finders with git. But first,
 @@@@@@@ @^_^@@@@@ @@@@@@@ WAKE UP SHEEPLE WAKE UP SHEEPLE WAKE UP SHEEPLE  You can search the diffs of all your commits with git log -G or git log -S.</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>http://www.example.com/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://www.example.com/about/</guid>
-      <description>Hi, I&amp;rsquo;m Daniel Ting! Welcome to Super Pork Chop, my blog.
-As a senior worker bee in a distant land of fire and ice, I teach young roombas the errors of their ways, so they may one day be released into the wild. Half of the time, I&amp;rsquo;m like one of those horrible deep sea creatures that stay after 5:30 and dwell in the depths of Engineering, debugging nameless things. The rest of the time I float around in the clouds, sending email through the atmosphere and holding my nose while writing bash scripts.</description>
     </item>
     
   </channel>
