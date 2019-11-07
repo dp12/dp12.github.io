@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>iSH on Super Pork Chop</title>
+    <link>http://www.example.com/tags/ish/</link>
+    <description>Recent content in iSH on Super Pork Chop</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 06 Nov 2019 00:00:00 -0500</lastBuildDate>
+    
+	<atom:link href="http://www.example.com/tags/ish/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Tipping like it&#39;s 1989 (or: emacs iPhone &lt;3)</title>
+      <link>http://www.example.com/posts/tippinglikeits1989/</link>
+      <pubDate>Wed, 06 Nov 2019 00:00:00 -0500</pubDate>
+      
+      <guid>http://www.example.com/posts/tippinglikeits1989/</guid>
+      <description>Long ago in the 1980&amp;rsquo;s, the geeks of yore wielded RPN calculators such as the HP-42S at the local diner. Calculating tips since has never been so cool.
+But what is RPN? RPN stands for &amp;ldquo;Reverse Polish Notation&amp;rdquo;, a syntax where operands are given before the operator. This is somewhat backwards compared to infix notation, which normal humans are used to, as well as prefix (aka &amp;ldquo;Polish&amp;rdquo;) notation, which is used in Lisp and other languages.</description>
+    </item>
+    
+  </channel>
+</rss>
