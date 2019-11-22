@@ -5,10 +5,20 @@
     <link>http://www.example.com/posts/</link>
     <description>Recent content in Posts on Super Pork Chop</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 06 Nov 2019 00:00:00 -0500</lastBuildDate>
+    <lastBuildDate>Thu, 21 Nov 2019 00:00:00 -0500</lastBuildDate>
     
 	<atom:link href="http://www.example.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Adventures with the Lily58 #1: A New Keeb</title>
+      <link>http://www.example.com/posts/adventures-with-the-lily58-part-1/</link>
+      <pubDate>Thu, 21 Nov 2019 00:00:00 -0500</pubDate>
+      
+      <guid>http://www.example.com/posts/adventures-with-the-lily58-part-1/</guid>
+      <description>My journey with mechanical keyboards began when I was an intern at a Big Chip Company TM. My coworker had just bought a Poker 2 and I was mesmerized by the precise and delicate &amp;ldquo;shicks&amp;rdquo; it produced, not to mention its sleek and compact profile.
+Upon landing my first job, I bought my first mech keyboard, a KeyCool 84 with early Kailh brown switches. I was deeply disappointed - it was clunky and cheap feeling compared to the Poker.</description>
+    </item>
     
     <item>
       <title>Tipping like it&#39;s 1989 (or: emacs iPhone &lt;3)</title>

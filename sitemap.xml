@@ -3,6 +3,36 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://www.example.com/posts/adventures-with-the-lily58-part-1/</loc>
+    <lastmod>2019-11-21T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.example.com/tags/keyboard/</loc>
+    <lastmod>2019-11-21T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.example.com/tags/lily58/</loc>
+    <lastmod>2019-11-21T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.example.com/posts/</loc>
+    <lastmod>2019-11-21T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.example.com/</loc>
+    <lastmod>2019-11-21T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.example.com/tags/</loc>
+    <lastmod>2019-11-21T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://www.example.com/tags/emacs/</loc>
     <lastmod>2019-11-06T00:00:00-05:00</lastmod>
   </url>
@@ -13,22 +43,7 @@
   </url>
   
   <url>
-    <loc>http://www.example.com/posts/</loc>
-    <lastmod>2019-11-06T00:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://www.example.com/tags/radare2/</loc>
-    <lastmod>2019-11-06T00:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://www.example.com/</loc>
-    <lastmod>2019-11-06T00:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://www.example.com/tags/</loc>
     <lastmod>2019-11-06T00:00:00-05:00</lastmod>
   </url>
   
