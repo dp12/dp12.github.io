@@ -16,10 +16,10 @@
       <pubDate>Fri, 11 Oct 2019 00:00:32 -0400</pubDate>
       
       <guid>http://www.example.com/posts/git-funcs/</guid>
-      <description>Many developers, new and old, curse git from the depths of their bowels. However, once you get past the learning curve, it&amp;rsquo;s surprisingly fun to tinker and automate common git tasks. The following are a collection of bash functions and aliases that accelerate my workflow considerably:
+      <description>Many developers, new and old, curse git from the depths of their bowels. However, once you get past the learning curve, it&#39;s surprisingly fun to tinker and automate common git tasks. The following are a collection of bash functions and aliases that accelerate my workflow considerably:
 glS &amp;ldquo;git pickaxe with filter&amp;rdquo;
 A lot of magic occurs when you combine fuzzy finders with git. But first,
-@@@@@@@ @^_^@@@@@ @@@@@@@ WAKE UP SHEEPLE WAKE UP SHEEPLE WAKE UP SHEEPLE  You can search the diffs of all your commits with git log -G or git log -S.</description>
+@@@@@@@@^_^@@@@@@@@@@@@WAKE UP SHEEPLEWAKE UP SHEEPLEWAKE UP SHEEPLE You can search the diffs of all your commits with git log -G or git log -S.</description>
     </item>
     
   </channel>

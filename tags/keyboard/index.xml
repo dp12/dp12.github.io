@@ -5,10 +5,20 @@
     <link>http://www.example.com/tags/keyboard/</link>
     <description>Recent content in keyboard on Super Pork Chop</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 21 Nov 2019 00:00:00 -0500</lastBuildDate>
+    <lastBuildDate>Sun, 01 Dec 2019 00:00:00 -0500</lastBuildDate>
     
 	<atom:link href="http://www.example.com/tags/keyboard/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Adventures with the Lily58 #2: The Diodes Strike Back</title>
+      <link>http://www.example.com/posts/adventures-with-the-lily58-part-2/</link>
+      <pubDate>Sun, 01 Dec 2019 00:00:00 -0500</pubDate>
+      
+      <guid>http://www.example.com/posts/adventures-with-the-lily58-part-2/</guid>
+      <description>In the first part of this series, I went through the process of selecting a split keyboard. I decided to go with the Lily58. Now that the PCBs had arrived, I began to assemble the keyboard with some trepidation. The following build guides were quite helpful:
+ kata0518&#39;s buildguide_en.md - the original build guide  I found out too late that the keyhive build guide I was using was outdated and missing some pictures.</description>
+    </item>
     
     <item>
       <title>Adventures with the Lily58 #1: A New Keeb</title>

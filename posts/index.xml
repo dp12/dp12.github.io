@@ -5,10 +5,20 @@
     <link>http://www.example.com/posts/</link>
     <description>Recent content in Posts on Super Pork Chop</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 21 Nov 2019 00:00:00 -0500</lastBuildDate>
+    <lastBuildDate>Sun, 01 Dec 2019 00:00:00 -0500</lastBuildDate>
     
 	<atom:link href="http://www.example.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Adventures with the Lily58 #2: The Diodes Strike Back</title>
+      <link>http://www.example.com/posts/adventures-with-the-lily58-part-2/</link>
+      <pubDate>Sun, 01 Dec 2019 00:00:00 -0500</pubDate>
+      
+      <guid>http://www.example.com/posts/adventures-with-the-lily58-part-2/</guid>
+      <description>In the first part of this series, I went through the process of selecting a split keyboard. I decided to go with the Lily58. Now that the PCBs had arrived, I began to assemble the keyboard with some trepidation. The following build guides were quite helpful:
+ kata0518&#39;s buildguide_en.md - the original build guide  I found out too late that the keyhive build guide I was using was outdated and missing some pictures.</description>
+    </item>
     
     <item>
       <title>Adventures with the Lily58 #1: A New Keeb</title>
@@ -26,8 +36,8 @@ Upon landing my first job, I bought my first mech keyboard, a KeyCool 84 with ea
       <pubDate>Wed, 06 Nov 2019 00:00:00 -0500</pubDate>
       
       <guid>http://www.example.com/posts/tippinglikeits1989/</guid>
-      <description>Long ago in the 1980&amp;rsquo;s, the geeks of yore wielded RPN calculators such as the HP-42S at the local diner. Calculating tips since has never been so cool.
-But what is RPN? RPN stands for &amp;ldquo;Reverse Polish Notation&amp;rdquo;, a syntax where operands are given before the operator. This is somewhat backwards compared to infix notation, which normal humans are used to, as well as prefix (aka &amp;ldquo;Polish&amp;rdquo;) notation, which is used in Lisp and other languages.</description>
+      <description>Long ago in the 1980&#39;s, the geeks of yore wielded RPN calculators such as the HP-42S at the local diner. Calculating tips since has never been so cool.
+But what is RPN? RPN stands for &amp;ldquo;Reverse Polish Notation&amp;quot;, a syntax where operands are given before the operator. This is somewhat backwards compared to infix notation, which normal humans are used to, as well as prefix (aka &amp;ldquo;Polish&amp;rdquo;) notation, which is used in Lisp and other languages.</description>
     </item>
     
     <item>
@@ -36,10 +46,10 @@ But what is RPN? RPN stands for &amp;ldquo;Reverse Polish Notation&amp;rdquo;, a
       <pubDate>Fri, 11 Oct 2019 00:00:32 -0400</pubDate>
       
       <guid>http://www.example.com/posts/git-funcs/</guid>
-      <description>Many developers, new and old, curse git from the depths of their bowels. However, once you get past the learning curve, it&amp;rsquo;s surprisingly fun to tinker and automate common git tasks. The following are a collection of bash functions and aliases that accelerate my workflow considerably:
+      <description>Many developers, new and old, curse git from the depths of their bowels. However, once you get past the learning curve, it&#39;s surprisingly fun to tinker and automate common git tasks. The following are a collection of bash functions and aliases that accelerate my workflow considerably:
 glS &amp;ldquo;git pickaxe with filter&amp;rdquo;
 A lot of magic occurs when you combine fuzzy finders with git. But first,
-@@@@@@@ @^_^@@@@@ @@@@@@@ WAKE UP SHEEPLE WAKE UP SHEEPLE WAKE UP SHEEPLE  You can search the diffs of all your commits with git log -G or git log -S.</description>
+@@@@@@@@^_^@@@@@@@@@@@@WAKE UP SHEEPLEWAKE UP SHEEPLEWAKE UP SHEEPLE You can search the diffs of all your commits with git log -G or git log -S.</description>
     </item>
     
   </channel>

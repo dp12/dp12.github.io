@@ -2,22 +2,22 @@
 <html lang='en'><head>
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='Many developers, new and old, curse git from the depths of their bowels. However, once you get past the learning curve, it&rsquo;s surprisingly fun to tinker and automate common git tasks. The following are a collection of bash functions and aliases that accelerate my workflow considerably:
+<meta name='description' content='Many developers, new and old, curse git from the depths of their bowels. However, once you get past the learning curve, it&#39;s surprisingly fun to tinker and automate common git tasks. The following are a collection of bash functions and aliases that accelerate my workflow considerably:
 glS &ldquo;git pickaxe with filter&rdquo;
 A lot of magic occurs when you combine fuzzy finders with git. But first,
-@@@@@@@ @^_^@@@@@ @@@@@@@ WAKE UP SHEEPLE WAKE UP SHEEPLE WAKE UP SHEEPLE  You can search the diffs of all your commits with git log -G or git log -S.'>
+@@@@@@@@^_^@@@@@@@@@@@@WAKE UP SHEEPLEWAKE UP SHEEPLEWAKE UP SHEEPLE You can search the diffs of all your commits with git log -G or git log -S.'>
 <meta name='theme-color' content='#44ccff'>
 
 <meta property='og:title' content='Woah, git just wanna have func • Super Pork Chop'>
-<meta property='og:description' content='Many developers, new and old, curse git from the depths of their bowels. However, once you get past the learning curve, it&rsquo;s surprisingly fun to tinker and automate common git tasks. The following are a collection of bash functions and aliases that accelerate my workflow considerably:
+<meta property='og:description' content='Many developers, new and old, curse git from the depths of their bowels. However, once you get past the learning curve, it&#39;s surprisingly fun to tinker and automate common git tasks. The following are a collection of bash functions and aliases that accelerate my workflow considerably:
 glS &ldquo;git pickaxe with filter&rdquo;
 A lot of magic occurs when you combine fuzzy finders with git. But first,
-@@@@@@@ @^_^@@@@@ @@@@@@@ WAKE UP SHEEPLE WAKE UP SHEEPLE WAKE UP SHEEPLE  You can search the diffs of all your commits with git log -G or git log -S.'>
+@@@@@@@@^_^@@@@@@@@@@@@WAKE UP SHEEPLEWAKE UP SHEEPLEWAKE UP SHEEPLE You can search the diffs of all your commits with git log -G or git log -S.'>
 <meta property='og:url' content='http://www.example.com/posts/git-funcs/'>
 <meta property='og:site_name' content='Super Pork Chop'>
 <meta property='og:type' content='article'><meta property='article:section' content='posts'><meta property='article:tag' content='git'><meta property='article:published_time' content='2019-10-11T00:00:32-04:00'/><meta property='article:modified_time' content='2019-10-11T00:00:32-04:00'/><meta name='twitter:card' content='summary'>
 
-<meta name="generator" content="Hugo 0.59.1" />
+<meta name="generator" content="Hugo 0.60.1" />
 
   <title>Woah, git just wanna have func • Super Pork Chop</title>
   <link rel='canonical' href='http://www.example.com/posts/git-funcs/'>
@@ -112,17 +112,11 @@ A lot of magic occurs when you combine fuzzy finders with git. But first,
   
 
   <div class='container entry-content'>
-  
-
-<p>Many developers, new and old, curse git from the depths of their bowels. However, once you get past the learning curve, it&rsquo;s surprisingly fun to tinker and automate common git tasks. The following are a collection of bash functions and aliases that accelerate my workflow considerably:</p>
-
+  <p>Many developers, new and old, curse git from the depths of their bowels. However, once you get past the learning curve, it's surprisingly fun to tinker and automate common git tasks. The following are a collection of bash functions and aliases that accelerate my workflow considerably:</p>
 <h2 id="gls">glS</h2>
-
 <p><em>&ldquo;git pickaxe with filter&rdquo;</em></p>
-
 <p>A lot of magic occurs when you combine fuzzy finders with git.
 But first,</p>
-
 <pre><code>@@@@@@@
 @^_^@@@@@
 @@@@@@@
@@ -130,13 +124,9 @@ WAKE UP SHEEPLE
 WAKE UP SHEEPLE
 WAKE UP SHEEPLE
 </code></pre>
-
 <p>You can search the diffs of all your commits with <code>git log -G</code> or <code>git log -S</code>.</p>
-
 <p><em>The author continues yelling hoarsely about the git log --pickaxe option as HR drags him away.</em></p>
-
 <p>One of the less well-known, but most useful git log features is the pickaxe option, which lets you search the actual code changes in all commits. To make it more convenient to use, the following function adds the <code>--stat</code> option to see which files were changed. And to filter out unwanted commits, you can use the <code>--grep</code> and <code>--invert-grep</code> options. Once you identify a commit you want to see, you can easily view its changes by running <code>git show &lt;commit hash&gt;</code></p>
-
 <pre><code># Example:
 #     glS &quot;//specific comment somewhere in the code&quot;
 #     glS &quot;important_var_with_specific_name =&quot;
@@ -146,23 +136,15 @@ glS () {
     git log --stat -S$1 --grep=&quot;Whitespace cleanup&quot; --invert-grep
 }
 </code></pre>
-
-<h2 id="gcz-glz">gcz/glz</h2>
-
+<h2 id="gczglz">gcz/glz</h2>
 <p><em>&ldquo;interactive fuzzy git checkout/log&rdquo;</em></p>
-
 <p>Descriptive names for branches can get unbearably long. By piping the git branch output through fzf or fzy, you can fuzzy select the branch you want from a list, sorted by when branches were last updated.</p>
-
 <pre><code>alias gcz='git checkout $(git branch --sort=&quot;-authordate&quot; | fzy)'
 alias glz='git log $(git branch --sort=&quot;-authordate&quot; | fzy)'
 </code></pre>
-
 <h2 id="gla">gla</h2>
-
 <p><em>&ldquo;git log by author, simplified&rdquo;</em></p>
-
-<p>Many times, it&rsquo;s useful to see a list of all of the commits from a particular person. The following function allows you to specify a particular author. If no author is specified, it defaults to showing commits made by you.</p>
-
+<p>Many times, it's useful to see a list of all of the commits from a particular person. The following function allows you to specify a particular author. If no author is specified, it defaults to showing commits made by you.</p>
 <pre><code># Example:
 #     gla jsmith
 #
@@ -172,28 +154,19 @@ gla() {
   printf &quot;$cmd\n\n&quot;; eval &quot;$cmd&quot;
 }
 </code></pre>
-
 <h2 id="gpb">gPb</h2>
-
 <p><em>&ldquo;git push current branch&rdquo;</em></p>
-
-<p>For the same reasons as above, it&rsquo;s nice to have a faster way of pushing out branches with long names. This command will push out the current branch you&rsquo;re on (assuming your remote is origin). To delete the branch, just append <code>--delete</code>.</p>
-
+<p>For the same reasons as above, it's nice to have a faster way of pushing out branches with long names. This command will push out the current branch you're on (assuming your remote is origin). To delete the branch, just append <code>--delete</code>.</p>
 <pre><code># Example:
 #     gPb --delete
 #
 # Definition:
 alias gPb='git push origin $(git rev-parse --abbrev-ref HEAD)'
 </code></pre>
-
 <h2 id="gshf">gshf</h2>
-
 <p><em>&ldquo;git show file at old commit hash&rdquo;</em></p>
-
 <p>A lot of times I want to enter the time machine and see what a file looked like sometime in history. The following function accepts a git commit hash and file name, then lets you fuzzily select the desired file from the possible candidates. Using git show, it displays the file at that revision.</p>
-
 <p>You can even write the output to a file so your favorite editor can stomach it.</p>
-
 <pre><code># Example:
 # gshf ca09238 myfile.c &gt; myfile-old.c
 #
@@ -210,13 +183,9 @@ gshf() {
   fi
 }
 </code></pre>
-
 <h2 id="gspr">gspr</h2>
-
 <p><em>&ldquo;git save, pull, and restore&rdquo;</em></p>
-
-<p>Developers often want to pull from a central repo, but are stymied by messages about &ldquo;Unstaged changes&hellip;&rdquo;. The traditional way to deal with this is to stash your local changes, <code>git pull --rebase</code>, and finally <code>git stash pop</code> to restore your stashed changes. This command handles it in a single step. If no stashing is needed, it just does the rebase.</p>
-
+<p>Developers often want to pull from a central repo, but are stymied by messages about &ldquo;Unstaged changes&hellip;&quot;. The traditional way to deal with this is to stash your local changes, <code>git pull --rebase</code>, and finally <code>git stash pop</code> to restore your stashed changes. This command handles it in a single step. If no stashing is needed, it just does the rebase.</p>
 <pre><code>gspr() {
   if ! git diff-index --quiet HEAD --; then
     echo &quot;git stash save; git pull --rebase; git stash pop&quot;
@@ -227,13 +196,9 @@ gshf() {
   fi
 }
 </code></pre>
-
 <h2 id="gcfu">gcfu</h2>
-
 <p><em>&ldquo;configure git username and email quickly&rdquo;</em></p>
-
 <p>One thing I occasionally find irksome is configuring a new git repo with my user name and email. It seems to take a disproportionate amount of typing for what is really a small task. This command lets you do the same thing with just 4 keystrokes, followed by your name and email.</p>
-
 <pre><code># Example:
 #     gcfu &quot;dp12&quot; &quot;dp12@myemail.com&quot;
 #
@@ -255,15 +220,10 @@ gcfu() {
   fi
 }
 </code></pre>
-
 <h1 id="bonus">BONUS:</h1>
-
 <h2 id="grrauth">grrauth</h2>
-
-<p><em>&ldquo;Rewrite author/committer in history, the bash function way!&rdquo;</em></p>
-
-<p>Have you ever misconfigured your name and email and then made a series of commits? Github supplies a <a href="https://help.github.com/articles/changing-author-info/" target="_blank">handy script</a> to fix it for you. But if you want to execute the script, you have to copy it to every repo you want to do the change in and then execute it. I think it&rsquo;s much easier to deploy as a bash function, so I converted the script into one. If no arguments other than the old email are given, it pulls the new username and email from your git config.</p>
-
+<p><em>&ldquo;Rewrite author/committer in history, the bash function way!&quot;</em></p>
+<p>Have you ever misconfigured your name and email and then made a series of commits? Github supplies a <a href="https://help.github.com/articles/changing-author-info/">handy script</a> to fix it for you. But if you want to execute the script, you have to copy it to every repo you want to do the change in and then execute it. I think it's much easier to deploy as a bash function, so I converted the script into one. If no arguments other than the old email are given, it pulls the new username and email from your git config.</p>
 <pre><code># Example:
 #     grrauth wrong-email@mymail.com
 #

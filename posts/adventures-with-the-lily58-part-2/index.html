@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang='en'><head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='In the first part of this series, I went through the process of selecting a split keyboard. I decided to go with the Lily58. Now that the PCBs had arrived, I began to assemble the keyboard with some trepidation. The following build guides were quite helpful:
+ kata0518&#39;s buildguide_en.md - the original build guide  I found out too late that the keyhive build guide I was using was outdated and missing some pictures.'>
+<meta name='theme-color' content='#44ccff'>
+
+<meta property='og:title' content='Adventures with the Lily58 #2: The Diodes Strike Back • Super Pork Chop'>
+<meta property='og:description' content='In the first part of this series, I went through the process of selecting a split keyboard. I decided to go with the Lily58. Now that the PCBs had arrived, I began to assemble the keyboard with some trepidation. The following build guides were quite helpful:
+ kata0518&#39;s buildguide_en.md - the original build guide  I found out too late that the keyhive build guide I was using was outdated and missing some pictures.'>
+<meta property='og:url' content='http://www.example.com/posts/adventures-with-the-lily58-part-2/'>
+<meta property='og:site_name' content='Super Pork Chop'>
+<meta property='og:type' content='article'><meta property='article:section' content='posts'><meta property='article:tag' content='lily58'><meta property='article:tag' content='keyboard'><meta property='article:published_time' content='2019-12-01T00:00:00-05:00'/><meta property='article:modified_time' content='2019-12-01T00:00:00-05:00'/><meta name='twitter:card' content='summary'>
+
+<meta name="generator" content="Hugo 0.60.1" />
+
+  <title>Adventures with the Lily58 #2: The Diodes Strike Back • Super Pork Chop</title>
+  <link rel='canonical' href='http://www.example.com/posts/adventures-with-the-lily58-part-2/'>
+  
+  
+  <link rel='icon' href='/favicon.ico'>
+<link rel='stylesheet' href='/assets/css/main.fb20af92.css'><link rel='stylesheet' href='/css/custom.css'><style>
+:root{--color-accent:#44ccff;}
+</style>
+
+  
+
+</head>
+<body class='page type-posts'>
+
+  <div class='site'><a class='screen-reader-text' href='#content'>Skip to Content</a><div class='main'><nav id='main-menu' class='menu main-menu' aria-label='Main Menu'>
+  <div class='container'>
+    
+    <ul><li class='item'>
+        <a href='https://dp12.github.io/' class="repository">
+          <span>Home</span>
+        </a>
+      </li><li class='item'>
+        <a href='/about/' class="">
+          <span>About</span>
+        </a>
+      </li></ul>
+  </div>
+</nav><div class='header-widgets'>
+        <div class='container'>
+    
+    <style>.widget-breadcrumbs li:after{content:'\2f '}</style>
+  <section class='widget widget-breadcrumbs sep-after'>
+    <nav id='breadcrumbs'>
+      <ol><li><a href='/'>Super Pork Chop</a></li><li><a href='/posts/'>Posts</a></li><li><span>Adventures with the Lily58 #2: The Diodes Strike Back</span></li></ol>
+    </nav>
+  </section></div>
+      </div>
+
+      <header id='header' class='header site-header'>
+        <div class='container sep-after'>
+          <div class='header-info'><p class='site-title title'>Super Pork Chop</p><p class='desc site-desc'>emacs, hacking, and all things bright and beautiful</p>
+          </div>
+        </div>
+      </header>
+
+      <main id='content'>
+
+
+<article lang='en' class='entry'>
+  <header class='header entry-header'>
+  <div class='container sep-after'>
+    <div class='header-info'>
+      <h1 class='title'>Adventures with the Lily58 #2: The Diodes Strike Back</h1>
+      
+
+    </div>
+    <div class='entry-meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader-text'>Posted on </span>
+  <time class='entry-date' datetime='2019-12-01T00:00:00-05:00'>2019, Dec 01</time>
+</span>
+
+  
+  
+<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/>
+  
+</svg>
+5 mins read
+</span>
+
+
+  
+  
+</div>
+
+
+  </div>
+</header>
+
+  
+  
+
+  <div class='container entry-content'>
+  <p>In the first part of this series, I went through the process of selecting a split keyboard. I decided to go with the Lily58. Now that the PCBs had arrived, I began to assemble the keyboard with some trepidation. The following build guides were quite helpful:</p>
+<ul>
+<li><a href="https://github.com/kata0510/Lily58/blob/master/Pro/Doc/buildguide%5Fen.md">kata0518's buildguide_en.md</a> - the original build guide
+<ul>
+<li>I found out too late that the keyhive build guide I was using was outdated and missing some pictures. The kata0518 guide contains all of the pictures, as well as updated descriptions.</li>
+</ul>
+</li>
+<li><a href="https://www.youtube.com/watch?v=4VrQZnWODnE">Japanese video build log</a> - live build video with some suspiciously peppy music</li>
+</ul>
+<p>The first parts to populate were the diodes. Somewhat skeptical of my own soldering skills, I had ordered through-hole diodes. Despite my being a very middling electrical engineering student, the soldering turned out to be the easy part. Inserting the diodes was a nightmare. The PCB claimed to support both surface mount and through-hole diodes, but the holes for the through-hole parts were tiny. I quickly found that inserting through-hole diodes was several orders of magnitude harder than threading a proton torpedo down an exhaust port. Since no one was hovering over my shoulder and telling me to &ldquo;use the Force&rdquo;, I got out my trusty pair of pliers and dragged the diodes against their will through the gauntlet. This happened about 58 times.</p>
+<img src="/lily58-part2-1.png" title="pulling a diode through" style="width:100%;">
+<p>When the leads got bent, as they were wont to do, it was impossible to push them through the holes, so I had to clip off the bent segments and try again. Sometimes the diode leads snapped clean off, especially when I pulled straight from the other side. Pulling them at a 45 degree angle seemed to prevent this failure mode.</p>
+<img src="/lily58-part2-2.png" title="diode insertion, top side" style="width:100%;">
+<diode montage>
+I present to you this sad and emotionally overwrought collage of warped diode pictures, mostly because PowerPoint thought it was a good idea.
+<img src="/lily58-part2-3.png" title="tormented diodes" style="width:100%;">
+<p>After a couple of tries, I learned the trick. Holding the board so that its plane formed a line to the eye, I mentally visualized pushing the lead &ldquo;through&rdquo; the board, as straight as possible. This strategy was somewhat helpful. Even so, it took a little over a week to install all of the diodes. After all of the soldering, I cleaned off the PCB with some 91% isopropyl from CVS.</p>
+<img src="/lily58-part2-4.png" title="the happy diode" style="width:100%;">
+<p>The rest of the assembly was a cakewalk in comparison to the diodes. The hotswap sockets fit on and were soldered with no hitches whatsoever. Though the build guide recommended affixing them to the board with tape, I was fine without it.</p>
+<img src="/lily58-part2-5.png" title="hotswap sockets and diodes ready to go" style="width:100%;">
+<p>I used my multimeter in connectivity mode to remind myself which legs shorted together upon button press for these tactile push buttons. The actual soldering wasn't too difficult, although I did have to carefully bend out the pins so they would fit into the comparatively wide holes. I didn't have the original push buttons the board was designed for, but these worked, albeit with a little bit of flexibility in the leads. The TRRS jacks were a quick and simple soldering job.</p>
+<img src="/lily58-part2-6.png" title="TRRS jacks and push buttons" style="width:100%;">
+<p>Per the build instructions, I shorted together the four connections under the micro controllers using liberal globs of solder.</p>
+<img src="/lily58-part2-7.png" title="bridging the connections" style="width:100%;">
+<p>Finally, it was time to install the micros! The first step was putting in the headers.</p>
+<img src="/lily58-part2-8.png" title="headers for Arduino Pro Micros" style="width:100%;">
+<p>Since there were 4 lines of holes, it was a little tricky figuring out where to place the micros. After examining other builds, I determined that I should use the rightmost set of holes for both boards (when the top side of the board is facing up).</p>
+<img src="/lily58-part2-9.png" title="holes for headers viewed from top side" style="width:20%;">
+<p>Upon running <code>sudo make lily58:default:avrdude</code>, the qmk firmware compiles (very slowly) and avrdude immediately tries to flash your attached microcontroller. It then flashes a message that instructs you to reset your Arduino Pro Micro.</p>
+<p>Unfortunately, at this point I haven't soldered it to anything and I need to short GND to RESET. What am I going to do?! I ended going with the ghetto method below.</p>
+<img src="/lily58-part2-10.png" title="ghetto reset method" style="width:100%;">
+<p><strong>NOTE:</strong> Make sure you don't have any virtual machines running on your computer when flashing. They can prevent avrdude from recognizing the Arduino. Not saying this happened to me.</p>
+<p>With the Arduino Pro Micros flashed, I took a deep breath and soldered them to the board. No going back now! I was little too eager to try things out, so I prematurely stuck in the keyswitches.</p>
+<img src="/lily58-part2-11.png" title="socketed Arduino Pro Micros" style="width:100%;">
+<p>I put in the OLED modules for good measure.</p>
+<img src="/lily58-part2-12.png" title="OLEDs installed" style="width:100%;">
+<p>After hooking in the TRRS cables and then plugging in the USB cable, the OLEDs whir to life. It's a good sign!</p>
+<img src="/lily58-part2-13.png" title="It's alive!" style="width:100%;">
+<p>I used a mini-screwdriver to peel off the protective backing from the acrylic OLED screen covers and then screwed them in. One of the two screw holes on the cover is closer to the edge - that side should be closer to the rest of the keyboard. I didn't understand what the build guide meant by &ldquo;mount with the wider side outwards&rdquo;, so of course I screwed it on the wrong way first. In hindsight, screwing on the screen covers should have been the very last thing I did. Later on, when I installed the keyswitches, I put too much stress on them and both of them cracked in different places. This why mothers should never let me come near their children or keyboards.</p>
+<img src="/lily58-part2-14.png" title="unwrapping the OLED covers" style="width:100%;">
+<p>What's a custom keyboard good for without RGB backlighting? Strangely enough, the build guide didn't have any instructions on how to install the LED strips. I researched the issue on reddit and found the following mapping for both halves of the keyboard:</p>
+<ul>
+<li><strong>GND</strong> -&gt; <strong>GND</strong></li>
+<li><strong>LED</strong> -&gt; <strong>Din</strong></li>
+<li><strong>VCC</strong> -&gt; <strong>+5V</strong></li>
+</ul>
+<img src="/lily58-part2-15.png" title="RGB strip wiring, master side" style="width:100%;">
+<img src="/lily58-part2-16.png" title="RGB strip wiring, slave side" style="width:100%;">
+<p>It worked admirably.</p>
+<p>Next, I needed to install the keyswitches and top plate.</p>
+<img src="/lily58-part2-17.png" title="top plate and the first keyswitches" style="width:100%;">
+<p>I pressed every key and looked for the appropriate reading on the OLED (the left OLED screen displays every keycode as it is pressed). But after installing all of the keyswitches, these three didn't work!</p>
+<img src="/lily58-part2-18.png" title="problem switches, 6, H, and M" style="width:100%;">
+<p>To be continued&hellip;</p>
+
+</div>
+
+  
+<footer class='entry-footer'>
+  <div class='container sep-before'><div class='tags'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
+  <line x1="7" y1="7" x2="7" y2="7"/>
+  
+</svg>
+<span class='screen-reader-text'>Tags: </span><a class='tag' href='/tags/lily58/'>lily58</a>, <a class='tag' href='/tags/keyboard/'>keyboard</a></div>
+
+  </div>
+</footer>
+
+
+</article>
+
+<nav class='entry-nav'>
+  <div class='container'><div class='prev-entry sep-before'>
+      <a href='/posts/adventures-with-the-lily58-part-1/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ Previous</span>
+        <span class='screen-reader-text'>Previous post: </span>Adventures with the Lily58 #1: A New Keeb</a>
+    </div></div>
+</nav>
+
+
+
+
+      </main>
+
+      <footer id='footer' class='footer'>
+        <div class='container sep-before'><section class='widget widget-social_menu sep-after'><nav aria-label='Social Menu'>
+    <ul><li>
+        <a href='https://github.com/dp12' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Github account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://linkedin.com/in/daniel-ting-b5387951' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Linkedin account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+  <rect x="2" y="9" width="4" height="12"/>
+  <circle cx="4" cy="4" r="2"/>
+  
+</svg>
+</a>
+      </li></ul>
+  </nav>
+</section><div class='copyright'>
+  <p> &copy; 2019 Daniel Ting. Powered by <a href="https://gohugo.io/">Hugo</a> and <a href="https://github.com/achary/engimo">engimo</a>. <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img class="display-centered" alt="Creative Commons License" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a> </p>
+</div>
+
+        </div>
+      </footer>
+
+    </div>
+  </div><script>window.__assets_js_src ="/assets/js/"</script>
+
+<script src='http://www.example.com/assets/js/main.9e5c4cf4.js'></script><script src='/js/custom.js'></script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
