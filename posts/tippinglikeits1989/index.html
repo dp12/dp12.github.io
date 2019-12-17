@@ -13,7 +13,7 @@ But what is RPN? RPN stands for &ldquo;Reverse Polish Notation&quot;, a syntax w
 <meta property='og:site_name' content='Super Pork Chop'>
 <meta property='og:type' content='article'><meta property='article:section' content='posts'><meta property='article:tag' content='emacs'><meta property='article:tag' content='radare2'><meta property='article:tag' content='iSH'><meta property='article:published_time' content='2019-11-06T00:00:00-05:00'/><meta property='article:modified_time' content='2019-11-06T00:00:00-05:00'/><meta name='twitter:card' content='summary'>
 
-<meta name="generator" content="Hugo 0.60.1" />
+<meta name="generator" content="Hugo 0.61.0" />
 
   <title>Tipping like it&#39;s 1989 (or: emacs iPhone &lt;3) • Super Pork Chop</title>
   <link rel='canonical' href='http://www.example.com/posts/tippinglikeits1989/'>
@@ -135,7 +135,7 @@ chmod u+x emacscalc.sh
 mv emacscalc.sh /usr/bin/ec
 </code></pre></div><p>Voila! You now can launch emacscalc by running <code>ec</code>. Now how about calculating that tip?</p>
 <p>Since emacs calc is an RPN calculator, you first need to push the operands on the stack, and then complete the computation by entering the operator. So to calculate a run-of-the-mill 18% tip on $8.35, we'd enter the following:</p>
-<p><code>8.35</code><code>RET</code><code>1.18</code><code>RET</code><code>*</code></p>
+<p><code>8.35</code> <code>RET</code> <code>1.18</code> <code>RET</code> <code>*</code></p>
 <img src="/emacscalc.png" title="emacscalc in action" style="width:60%;">
 <p>Here are a few other basic commands that can be useful:</p>
 <ul>
@@ -169,7 +169,7 @@ pip install rtv
 </code></pre></div><p>To view certain subreddits, either one or multiple, you can use the <code>-s</code> option.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">rtv -s emacs+cpp+python+programming
 <span style="color:#75715e"># Add the above as an alias</span> 
-echo <span style="color:#e6db74">&#34;rtv -s emacs+cpp+python+programming&#34;</span> &gt;&gt; ~/.profile
+echo <span style="color:#e6db74">&#34;alias rtvs=&#39;rtv -s emacs+cpp+python+programming&#39;&#34;</span> &gt;&gt; ~/.profile
 </code></pre></div><p>It scratches my inner gui luddite.</p>
 <img src="/rtv.png" title="reddit in the terminal" style="width:60%;">
 
