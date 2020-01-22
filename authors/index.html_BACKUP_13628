@@ -1,0 +1,245 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang='en'><head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='emacs, hacking, and all things bright and beautiful'>
+<meta name='theme-color' content='#44ccff'>
+
+<meta property='og:title' content='Authors • Super Pork Chop'>
+<meta property='og:description' content='emacs, hacking, and all things bright and beautiful'>
+<meta property='og:url' content='http://www.example.com/authors/'>
+<meta property='og:site_name' content='Super Pork Chop'>
+<meta property='og:type' content='website'><meta property='og:updated_time' content='2019-11-21T00:00:00-05:00'/><meta name='twitter:card' content='summary'>
+
+<meta name="generator" content="Hugo 0.59.1" />
+
+  <title>Authors • Super Pork Chop</title>
+  <link rel='canonical' href='http://www.example.com/authors/'>
+  
+    <link href="http://www.example.com/authors/index.xml" rel="alternate" type="application/rss+xml" title="Super Pork Chop" />
+  
+  
+  <link rel='icon' href='/favicon.ico'>
+<link rel='stylesheet' href='/assets/css/main.fb20af92.css'><link rel='stylesheet' href='/css/custom.css'><style>
+:root{--color-accent:#44ccff;}
+</style>
+
+  
+
+</head>
+<body class='taxonomyTerm type-authors taxonomy-author'>
+
+  <div class='site'><a class='screen-reader-text' href='#content'>Skip to Content</a><div class='main'><nav id='main-menu' class='menu main-menu' aria-label='Main Menu'>
+  <div class='container'>
+    
+    <ul><li class='item'>
+        <a href='https://dp12.github.io/' class="repository">
+          <span>Home</span>
+        </a>
+      </li><li class='item'>
+        <a href='/about/' class="">
+          <span>About</span>
+        </a>
+      </li></ul>
+  </div>
+</nav><div class='header-widgets'>
+        <div class='container'>
+    <style>.widget-breadcrumbs li:after{content:'\2f '}</style>
+  <section class='widget widget-breadcrumbs sep-after'>
+    <nav id='breadcrumbs'>
+      <ol><li><a href='/'>Super Pork Chop</a></li><li><span>Authors</span></li></ol>
+    </nav>
+  </section></div>
+      </div>
+
+      <header id='header' class='header site-header'>
+        <div class='container sep-after'>
+          <div class='header-info'><p class='site-title title'>Super Pork Chop</p><p class='desc site-desc'>emacs, hacking, and all things bright and beautiful</p>
+          </div>
+        </div>
+      </header>
+
+      <main id='content'>
+
+
+<header class='header'>
+  <div class='container sep-after'>
+    <div class='header-info'>
+      <h1 class='title'>Authors</h1>
+
+      
+
+    </div>
+  </div>
+</header>
+
+
+<div class='container list-container'>
+  <ul class='list'>
+  
+  </ul>
+</div>
+
+      </main>
+
+      <footer id='footer' class='footer'>
+        <div class='container sep-before'><section class='widget widget-social_menu sep-after'><nav aria-label='Social Menu'>
+    <ul><li>
+        <a href='https://github.com/dp12' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Github account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://linkedin.com/in/daniel-ting-b5387951' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Linkedin account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+  <rect x="2" y="9" width="4" height="12"/>
+  <circle cx="4" cy="4" r="2"/>
+  
+</svg>
+</a>
+      </li></ul>
+  </nav>
+</section><div class='copyright'>
+  <p> &copy; 2019 Daniel Ting. Powered by <a href="https://gohugo.io/">Hugo</a> and <a href="https://github.com/achary/engimo">engimo</a>. <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img class="display-centered" alt="Creative Commons License" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a> </p>
+</div>
+
+        </div>
+      </footer>
+
+    </div>
+  </div><script>window.__assets_js_src ="/assets/js/"</script>
+
+<script src='http://www.example.com/assets/js/main.9e5c4cf4.js'></script><script src='/js/custom.js'></script>
+</body>
+
+</html>
+
+=======
+<!DOCTYPE html>
+<html lang='en'><head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='emacs, hacking, and all things bright and beautiful'>
+<meta name='theme-color' content='#44ccff'>
+
+<meta property='og:title' content='Authors • Super Pork Chop'>
+<meta property='og:description' content='emacs, hacking, and all things bright and beautiful'>
+<meta property='og:url' content='http://www.example.com/authors/'>
+<meta property='og:site_name' content='Super Pork Chop'>
+<meta property='og:type' content='website'><meta property='og:updated_time' content='2019-12-01T00:00:00-05:00'/><meta name='twitter:card' content='summary'>
+
+<meta name="generator" content="Hugo 0.60.1" />
+
+  <title>Authors • Super Pork Chop</title>
+  <link rel='canonical' href='http://www.example.com/authors/'>
+  
+    <link href="http://www.example.com/authors/index.xml" rel="alternate" type="application/rss+xml" title="Super Pork Chop" />
+  
+  
+  <link rel='icon' href='/pixelporkchopfuzzicon.ico'>
+<link rel='stylesheet' href='/assets/css/main.fb20af92.css'><link rel='stylesheet' href='/css/custom.css'><style>
+:root{--color-accent:#44ccff;}
+</style>
+
+  
+
+</head>
+<body class='taxonomyTerm type-authors taxonomy-author'>
+
+  <div class='site'><a class='screen-reader-text' href='#content'>Skip to Content</a><div class='main'><nav id='main-menu' class='menu main-menu' aria-label='Main Menu'>
+  <div class='container'>
+    
+    <ul><li class='item'>
+        <a href='https://dp12.github.io/' class="repository">
+          <span>Home</span>
+        </a>
+      </li><li class='item'>
+        <a href='/about/' class="">
+          <span>About</span>
+        </a>
+      </li></ul>
+  </div>
+</nav><div class='header-widgets'>
+        <div class='container'>
+    <style>.widget-breadcrumbs li:after{content:'\2f '}</style>
+  <section class='widget widget-breadcrumbs sep-after'>
+    <nav id='breadcrumbs'>
+      <ol><li><a href='/'>Super Pork Chop</a></li><li><span>Authors</span></li></ol>
+    </nav>
+  </section></div>
+      </div>
+
+      <header id='header' class='header site-header'>
+        <div class='container sep-after'>
+          <div class='header-info'><p class='site-title title'>Super Pork Chop</p><p class='desc site-desc'>emacs, hacking, and all things bright and beautiful</p>
+          </div>
+        </div>
+      </header>
+
+      <main id='content'>
+
+
+<header class='header'>
+  <div class='container sep-after'>
+    <div class='header-info'>
+      <h1 class='title'>Authors</h1>
+
+      
+
+    </div>
+  </div>
+</header>
+
+
+<div class='container list-container'>
+  <ul class='list'>
+  
+  </ul>
+</div>
+
+      </main>
+
+      <footer id='footer' class='footer'>
+        <div class='container sep-before'><section class='widget widget-social_menu sep-after'><nav aria-label='Social Menu'>
+    <ul><li>
+        <a href='https://github.com/dp12' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Github account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://linkedin.com/in/daniel-ting-b5387951' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Linkedin account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+  <rect x="2" y="9" width="4" height="12"/>
+  <circle cx="4" cy="4" r="2"/>
+  
+</svg>
+</a>
+      </li></ul>
+  </nav>
+</section><div class='copyright'>
+  <p> &copy; 2019 Daniel Ting. Powered by <a href="https://gohugo.io/">Hugo</a> and <a href="https://github.com/achary/engimo">engimo</a>. <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img class="display-centered" alt="Creative Commons License" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a> </p>
+</div>
+
+        </div>
+      </footer>
+
+    </div>
+  </div><script>window.__assets_js_src ="/assets/js/"</script>
+
+<script src='http://www.example.com/assets/js/main.9e5c4cf4.js'></script><script src='/js/custom.js'></script>
+</body>
+
+</html>
+
+>>>>>>> e42ce11... fixup! Add clarification to tipping post

@@ -56,6 +56,15 @@
     </item>
     
     <item>
+      <title>reddit</title>
+      <link>http://www.example.com/tags/reddit/</link>
+      <pubDate>Wed, 06 Nov 2019 00:00:00 -0500</pubDate>
+      
+      <guid>http://www.example.com/tags/reddit/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>git</title>
       <link>http://www.example.com/tags/git/</link>
       <pubDate>Fri, 11 Oct 2019 00:00:32 -0400</pubDate>

@@ -13,7 +13,7 @@
 <meta property='og:site_name' content='Super Pork Chop'>
 <meta property='og:type' content='article'><meta property='article:section' content='posts'><meta property='article:tag' content='lily58'><meta property='article:tag' content='keyboard'><meta property='article:published_time' content='2019-12-01T00:00:00-05:00'/><meta property='article:modified_time' content='2019-12-01T00:00:00-05:00'/><meta name='twitter:card' content='summary'>
 
-<meta name="generator" content="Hugo 0.61.0" />
+<meta name="generator" content="Hugo 0.62.2" />
 
   <title>Adventures with the Lily58 #2: The Diodes Strike Back • Super Pork Chop</title>
   <link rel='canonical' href='http://www.example.com/posts/adventures-with-the-lily58-part-2/'>
@@ -122,7 +122,7 @@
 <p>When the leads got bent, as they were wont to do, it was impossible to push them through the holes, so I had to clip off the bent segments and try again. Sometimes the diode leads snapped clean off, especially when I pulled straight from the other side. Pulling them at a 45 degree angle seemed to prevent this failure mode.</p>
 <img src="/lily58-part2-2.png" title="diode insertion, top side" style="width:100%;">
 <diode montage>
-I present to you this sad and emotionally overwrought collage of warped diode pictures, mostly because PowerPoint thought it was a good idea.
+I present to you this emotionally overwrought collage of warped diode pictures.
 <img src="/lily58-part2-3.png" title="tormented diodes" style="width:100%;">
 <p>After a couple of tries, I learned the trick. Holding the board so that its plane formed a line to the eye, I mentally visualized pushing the lead &ldquo;through&rdquo; the board, as straight as possible. This strategy was somewhat helpful. Even so, it took a little over a week to install all of the diodes. After all of the soldering, I cleaned off the PCB with some 91% isopropyl from CVS.</p>
 <img src="/lily58-part2-4.png" title="the happy diode" style="width:100%;">
@@ -137,7 +137,8 @@ I present to you this sad and emotionally overwrought collage of warped diode pi
 <p>Since there were 4 lines of holes, it was a little tricky figuring out where to place the micros. After examining other builds, I determined that I should use the rightmost set of holes for both boards (when the top side of the board is facing up).</p>
 <img src="/lily58-part2-9.png" title="holes for headers viewed from top side" style="width:20%;">
 <p>Upon running <code>sudo make lily58:default:avrdude</code>, the qmk firmware compiles (very slowly) and avrdude immediately tries to flash your attached microcontroller. It then flashes a message that instructs you to reset your Arduino Pro Micro.</p>
-<p>Unfortunately, at this point I haven't soldered it to anything and I need to short GND to RESET. What am I going to do?! I ended going with the ghetto method below.</p>
+<p>Unfortunately, at this point I haven't soldered it to anything and I need to
+short GND to RESET. What to do? I ended up going with the ghetto method below.</p>
 <img src="/lily58-part2-10.png" title="ghetto reset method" style="width:100%;">
 <p><strong>NOTE:</strong> Make sure you don't have any virtual machines running on your computer when flashing. They can prevent avrdude from recognizing the Arduino. Not saying this happened to me.</p>
 <p>With the Arduino Pro Micros flashed, I took a deep breath and soldered them to the board. No going back now! I was little too eager to try things out, so I prematurely stuck in the keyswitches.</p>
@@ -191,7 +192,7 @@ I present to you this sad and emotionally overwrought collage of warped diode pi
   
 </svg>
  Previous</span>
-        <span class='screen-reader-text'>Previous post: </span>Adventures with the Lily58 #1: A New Keeb</a>
+        <span class='screen-reader-text'>Previous post: </span>Adventures with the Lily58 #1: A New Keyboard</a>
     </div></div>
 </nav>
 
@@ -223,7 +224,7 @@ I present to you this sad and emotionally overwrought collage of warped diode pi
       </li></ul>
   </nav>
 </section><div class='copyright'>
-  <p> &copy; 2019 Daniel Ting. Powered by <a href="https://gohugo.io/">Hugo</a> and <a href="https://github.com/achary/engimo">engimo</a>. <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img class="display-centered" alt="Creative Commons License" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a> </p>
+  <p> &copy; 2020 Daniel Ting. Powered by <a href="https://gohugo.io/">Hugo</a> and <a href="https://github.com/achary/engimo">engimo</a>. <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img class="display-centered" alt="Creative Commons License" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a> </p>
 </div>
 
         </div>
