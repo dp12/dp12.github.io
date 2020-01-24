@@ -5,10 +5,19 @@
     <link>http://www.example.com/</link>
     <description>Recent content on Super Pork Chop</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 01 Dec 2019 00:00:00 -0500</lastBuildDate>
+    <lastBuildDate>Thu, 23 Jan 2020 00:00:00 -0500</lastBuildDate>
     
 	<atom:link href="http://www.example.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Adventures with the Lily58 #3: Return of the M-key</title>
+      <link>http://www.example.com/posts/adventures-with-the-lily58-part-3/</link>
+      <pubDate>Thu, 23 Jan 2020 00:00:00 -0500</pubDate>
+      
+      <guid>http://www.example.com/posts/adventures-with-the-lily58-part-3/</guid>
+      <description>In the last build log, I was stuck with three dead switches on the right side of the keyboard. Using my pliers and pulling hard, I extracted all three of them. For two of them, I saw the problem immediately. One of the two pins on the switches was bent. They were easily bent back into shape with pliers. Then, I re-inserted them into their hotswap sockets. They started working with no further complaints.</description>
+    </item>
     
     <item>
       <title>Adventures with the Lily58 #2: The Diodes Strike Back</title>

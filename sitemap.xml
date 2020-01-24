@@ -3,32 +3,37 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://www.example.com/posts/adventures-with-the-lily58-part-2/</loc>
-    <lastmod>2019-12-01T00:00:00-05:00</lastmod>
+    <loc>http://www.example.com/posts/adventures-with-the-lily58-part-3/</loc>
+    <lastmod>2020-01-23T00:00:00-05:00</lastmod>
   </url>
   
   <url>
     <loc>http://www.example.com/tags/keyboard/</loc>
-    <lastmod>2019-12-01T00:00:00-05:00</lastmod>
+    <lastmod>2020-01-23T00:00:00-05:00</lastmod>
   </url>
   
   <url>
     <loc>http://www.example.com/tags/lily58/</loc>
-    <lastmod>2019-12-01T00:00:00-05:00</lastmod>
+    <lastmod>2020-01-23T00:00:00-05:00</lastmod>
   </url>
   
   <url>
     <loc>http://www.example.com/posts/</loc>
-    <lastmod>2019-12-01T00:00:00-05:00</lastmod>
+    <lastmod>2020-01-23T00:00:00-05:00</lastmod>
   </url>
   
   <url>
     <loc>http://www.example.com/</loc>
-    <lastmod>2019-12-01T00:00:00-05:00</lastmod>
+    <lastmod>2020-01-23T00:00:00-05:00</lastmod>
   </url>
   
   <url>
     <loc>http://www.example.com/tags/</loc>
+    <lastmod>2020-01-23T00:00:00-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.example.com/posts/adventures-with-the-lily58-part-2/</loc>
     <lastmod>2019-12-01T00:00:00-05:00</lastmod>
   </url>
   
