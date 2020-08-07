@@ -3,6 +3,51 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://www.example.com/tags/calling/</loc>
+    <lastmod>2020-08-07T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.example.com/posts/calling-conventions-for-pwn-and-profit/</loc>
+    <lastmod>2020-08-07T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.example.com/tags/convention/</loc>
+    <lastmod>2020-08-07T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.example.com/posts/</loc>
+    <lastmod>2020-08-07T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.example.com/tags/registers/</loc>
+    <lastmod>2020-08-07T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.example.com/tags/shellcode/</loc>
+    <lastmod>2020-08-07T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.example.com/</loc>
+    <lastmod>2020-08-07T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.example.com/tags/syscall/</loc>
+    <lastmod>2020-08-07T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://www.example.com/tags/</loc>
+    <lastmod>2020-08-07T00:00:00-04:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://www.example.com/posts/adventures-with-the-lily58-part-3/</loc>
     <lastmod>2020-01-23T00:00:00-05:00</lastmod>
   </url>
@@ -14,21 +59,6 @@
   
   <url>
     <loc>http://www.example.com/tags/lily58/</loc>
-    <lastmod>2020-01-23T00:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://www.example.com/posts/</loc>
-    <lastmod>2020-01-23T00:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://www.example.com/</loc>
-    <lastmod>2020-01-23T00:00:00-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://www.example.com/tags/</loc>
     <lastmod>2020-01-23T00:00:00-05:00</lastmod>
   </url>
   
