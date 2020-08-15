@@ -5,10 +5,20 @@
     <link>http://www.example.com/posts/</link>
     <description>Recent content in Posts on Super Pork Chop</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 07 Aug 2020 00:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Fri, 14 Aug 2020 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="http://www.example.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>InCTF 2020 ArchRide Writeup</title>
+      <link>http://www.example.com/posts/inctf20-archride-writeup/</link>
+      <pubDate>Fri, 14 Aug 2020 00:00:00 -0400</pubDate>
+      
+      <guid>http://www.example.com/posts/inctf20-archride-writeup/</guid>
+      <description>This past month, I played InCTF, a mid-level CTF organized by India&#39;s premier team, bi0s. I managed to solve one challenge called ArchRide - my first solve of a 1000-point challenge.
+The file given is a bzip that contains an ELF. Loading the ELF into Ghidra, we see a simple main function that reads a 14-character key and runs it through two check function. If the checks pass, the binary will print &amp;ldquo;Surprise!</description>
+    </item>
     
     <item>
       <title>Calling Conventions for Pwn and Profit</title>

@@ -5,10 +5,37 @@
     <link>http://www.example.com/tags/</link>
     <description>Recent content in Tags on Super Pork Chop</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 07 Aug 2020 00:00:00 -0400</lastBuildDate>
+    <lastBuildDate>Fri, 14 Aug 2020 00:00:00 -0400</lastBuildDate>
     
 	<atom:link href="http://www.example.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ctf</title>
+      <link>http://www.example.com/tags/ctf/</link>
+      <pubDate>Fri, 14 Aug 2020 00:00:00 -0400</pubDate>
+      
+      <guid>http://www.example.com/tags/ctf/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ghidra</title>
+      <link>http://www.example.com/tags/ghidra/</link>
+      <pubDate>Fri, 14 Aug 2020 00:00:00 -0400</pubDate>
+      
+      <guid>http://www.example.com/tags/ghidra/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>reverse engineering</title>
+      <link>http://www.example.com/tags/reverse-engineering/</link>
+      <pubDate>Fri, 14 Aug 2020 00:00:00 -0400</pubDate>
+      
+      <guid>http://www.example.com/tags/reverse-engineering/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>calling</title>
