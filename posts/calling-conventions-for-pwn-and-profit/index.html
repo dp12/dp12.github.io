@@ -4,18 +4,18 @@
 <meta name='viewport' content='width=device-width, initial-scale=1'>
 <meta name='description' content='Shellcoders and reverse engineers often need intimate knowledge of the registers used in calling functions and syscalls. This is a compressed cheatsheet of some of the most important conventions with a light sprinkling of mnemonics and links to more detailed information.
 NOTE: If there are more arguments than registers listed, the remaining arguments are passed on the stack (from right-to-left). Syscall information given is for Linux.
-x86  argument passing (cdecl): all arguments passed on the stack argument passing (stdcall): all arguments passed on the stack argument passing (fastcall): ecx, edx argument passing (thiscall): ecx gets &ldquo;this&rdquo; pointer; other arguments passed on the stack return value: eax syscall argument passing: ebx, ecx, edx, esi, edi, ebp  mnemonic: bcd sdb (&ldquo;bcd is super dumb binary&rdquo;)   syscall number: eax syscall table  x86_64  argument passing (Linux): rdi, rsi, rdx, rcx, r8, r9  mnemonic: &ldquo;dizzy dixie 89&rdquo; -&gt; &ldquo;disi dxcx 89&rdquo;   argument passing (Windows): rcx, rdx, r8, r9 return value: rax syscall argument passing: rdi, rsi, rdx, r10, r8, r9  mnemonic: &ldquo;dizzy dick 1089&rdquo; -&gt; &ldquo;disi dx 1089&rdquo;   syscall number: rax syscall table  ARM (32-bit)  argument passing: r0-r3 return value: r0 r4-r11 are callee-save registers (r9 may or may not be) syscall argument passing: r0-r6 syscall number: r7  ARM (64-bit)  argument passing: r0-r7 return value: r0 r19-r28 are callee-saved registers syscall argument passing: r0-r5 syscall number: r8  MIPS  argument passing (O32): a0-a3 argument passing (N32/N64): a0-a7 return value(s): v0, v1  RISC-V  argument passing: a0-a7 return value(s): a0, a1  PowerPC (32-bit)  argument passing: gpr3-gpr10 return value: gpr3 gpr3-gpr12 are caller-saved registers  References x86  https://lospi.'>
+ table th:first-of-type { width: 30%; } table th:nth-of-type(2) { width: 70%; }  x86    Topic Description     argument passing (cdecl) all arguments passed on the stack   argument passing (stdcall) all arguments passed on the stack   argument passing (fastcall) ecx, edx   argument passing (thiscall) ecx gets &ldquo;this&rdquo; pointer; other arguments passed on the stack   return value eax   syscall argument passing ebx, ecx, edx, esi, edi, ebp'>
 <meta name='theme-color' content='#44ccff'>
 
 <meta property='og:title' content='Calling Conventions for Pwn and Profit • Super Pork Chop'>
 <meta property='og:description' content='Shellcoders and reverse engineers often need intimate knowledge of the registers used in calling functions and syscalls. This is a compressed cheatsheet of some of the most important conventions with a light sprinkling of mnemonics and links to more detailed information.
 NOTE: If there are more arguments than registers listed, the remaining arguments are passed on the stack (from right-to-left). Syscall information given is for Linux.
-x86  argument passing (cdecl): all arguments passed on the stack argument passing (stdcall): all arguments passed on the stack argument passing (fastcall): ecx, edx argument passing (thiscall): ecx gets &ldquo;this&rdquo; pointer; other arguments passed on the stack return value: eax syscall argument passing: ebx, ecx, edx, esi, edi, ebp  mnemonic: bcd sdb (&ldquo;bcd is super dumb binary&rdquo;)   syscall number: eax syscall table  x86_64  argument passing (Linux): rdi, rsi, rdx, rcx, r8, r9  mnemonic: &ldquo;dizzy dixie 89&rdquo; -&gt; &ldquo;disi dxcx 89&rdquo;   argument passing (Windows): rcx, rdx, r8, r9 return value: rax syscall argument passing: rdi, rsi, rdx, r10, r8, r9  mnemonic: &ldquo;dizzy dick 1089&rdquo; -&gt; &ldquo;disi dx 1089&rdquo;   syscall number: rax syscall table  ARM (32-bit)  argument passing: r0-r3 return value: r0 r4-r11 are callee-save registers (r9 may or may not be) syscall argument passing: r0-r6 syscall number: r7  ARM (64-bit)  argument passing: r0-r7 return value: r0 r19-r28 are callee-saved registers syscall argument passing: r0-r5 syscall number: r8  MIPS  argument passing (O32): a0-a3 argument passing (N32/N64): a0-a7 return value(s): v0, v1  RISC-V  argument passing: a0-a7 return value(s): a0, a1  PowerPC (32-bit)  argument passing: gpr3-gpr10 return value: gpr3 gpr3-gpr12 are caller-saved registers  References x86  https://lospi.'>
+ table th:first-of-type { width: 30%; } table th:nth-of-type(2) { width: 70%; }  x86    Topic Description     argument passing (cdecl) all arguments passed on the stack   argument passing (stdcall) all arguments passed on the stack   argument passing (fastcall) ecx, edx   argument passing (thiscall) ecx gets &ldquo;this&rdquo; pointer; other arguments passed on the stack   return value eax   syscall argument passing ebx, ecx, edx, esi, edi, ebp'>
 <meta property='og:url' content='http://www.example.com/posts/calling-conventions-for-pwn-and-profit/'>
 <meta property='og:site_name' content='Super Pork Chop'>
 <meta property='og:type' content='article'><meta property='article:section' content='posts'><meta property='article:tag' content='registers'><meta property='article:tag' content='syscall'><meta property='article:tag' content='shellcode'><meta property='article:tag' content='calling'><meta property='article:tag' content='convention'><meta property='article:published_time' content='2020-08-07T00:00:00-04:00'/><meta property='article:modified_time' content='2020-08-07T00:00:00-04:00'/><meta name='twitter:card' content='summary'>
 
-<meta name="generator" content="Hugo 0.62.2" />
+<meta name="generator" content="Hugo 0.68.3" />
 
   <title>Calling Conventions for Pwn and Profit • Super Pork Chop</title>
   <link rel='canonical' href='http://www.example.com/posts/calling-conventions-for-pwn-and-profit/'>
@@ -35,7 +35,7 @@ x86  argument passing (cdecl): all arguments passed on the stack argument passin
   <div class='container'>
     
     <ul><li class='item'>
-        <a href='https://dp12.github.io/posts/' class="repository">
+        <a href='https://dp12.github.io/' class="repository">
           <span>Home</span>
         </a>
       </li><li class='item'>
@@ -112,101 +112,254 @@ x86  argument passing (cdecl): all arguments passed on the stack argument passin
   <div class='container entry-content'>
   <p>Shellcoders and reverse engineers often need intimate knowledge of the registers used in calling functions and syscalls. This is a compressed cheatsheet of some of the most important conventions with a light sprinkling of mnemonics and links to more detailed information.</p>
 <p><strong>NOTE</strong>: If there are more arguments than registers listed, the remaining arguments are passed on the stack (from right-to-left). Syscall information given is for Linux.</p>
+<style>
+table th:first-of-type {
+    width: 30%;
+}
+table th:nth-of-type(2) {
+    width: 70%;
+}
+</style>
 <h2 id="x86">x86</h2>
-<ul>
-<li>argument passing (cdecl): all arguments passed on the stack</li>
-<li>argument passing (stdcall): all arguments passed on the stack</li>
-<li>argument passing (fastcall): <code>ecx</code>, <code>edx</code></li>
-<li>argument passing (thiscall): <code>ecx</code> gets &ldquo;this&rdquo; pointer; other arguments passed on the stack</li>
-<li>return value: <code>eax</code></li>
-<li>syscall argument passing: <code>ebx</code>, <code>ecx</code>, <code>edx</code>, <code>esi</code>, <code>edi</code>, <code>ebp</code>
-<ul>
-<li>mnemonic: bcd sdb (&ldquo;bcd is super dumb binary&rdquo;)</li>
-</ul>
-</li>
-<li>syscall number: <code>eax</code></li>
-<li><a href="https://web.archive.org/web/20160907042308/http://docs.cs.up.ac.za/programming/asm/derick%5Ftut/syscalls.html">syscall table</a></li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Topic</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>argument passing (cdecl)</td>
+<td>all arguments passed on the stack</td>
+</tr>
+<tr>
+<td>argument passing (stdcall)</td>
+<td>all arguments passed on the stack</td>
+</tr>
+<tr>
+<td>argument passing (fastcall)</td>
+<td><code>ecx</code>, <code>edx</code></td>
+</tr>
+<tr>
+<td>argument passing (thiscall)</td>
+<td><code>ecx</code> gets &ldquo;this&rdquo; pointer; other arguments passed on the stack</td>
+</tr>
+<tr>
+<td>return value</td>
+<td><code>eax</code></td>
+</tr>
+<tr>
+<td>syscall argument passing</td>
+<td><code>ebx</code>, <code>ecx</code>, <code>edx</code>, <code>esi</code>, <code>edi</code>, <code>ebp</code><br><ul><li><strong>mnemonic</strong>: bcd sdb (&ldquo;bcd is super dumb binary&rdquo;)</li></ul></td>
+</tr>
+<tr>
+<td>syscall number</td>
+<td><code>eax</code></td>
+</tr>
+<tr>
+<td>syscall table</td>
+<td><a href="https://web.archive.org/web/20160907042308/http://docs.cs.up.ac.za/programming/asm/derick%5Ftut/syscalls.html">https://web.archive.org/web/20160907042308/http://docs.cs.up.ac.za/programming/asm/derick%5Ftut/syscalls.html</a></td>
+</tr>
+</tbody>
+</table>
 <h2 id="x86-64">x86_64</h2>
-<ul>
-<li>argument passing (Linux): <code>rdi</code>, <code>rsi</code>, <code>rdx</code>, <code>rcx</code>, <code>r8</code>, <code>r9</code>
-<ul>
-<li><strong>mnemonic</strong>: &ldquo;dizzy dixie 89&rdquo; -&gt; &ldquo;disi dxcx 89&rdquo;</li>
-</ul>
-</li>
-<li>argument passing (Windows): <code>rcx</code>, <code>rdx</code>, <code>r8</code>, <code>r9</code></li>
-<li>return value: rax</li>
-<li>syscall argument passing: <code>rdi</code>, <code>rsi</code>, <code>rdx</code>, <code>r10</code>, <code>r8</code>, <code>r9</code>
-<ul>
-<li><strong>mnemonic</strong>: &ldquo;dizzy dick 1089&rdquo; -&gt; &ldquo;disi dx 1089&rdquo;</li>
-</ul>
-</li>
-<li>syscall number: <code>rax</code></li>
-<li><a href="https://blog.rchapman.org/posts/Linux%5FSystem%5FCall%5FTable%5Ffor%5Fx86%5F64/">syscall table</a></li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Topic</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>argument passing (Linux)</td>
+<td><code>rdi</code>, <code>rsi</code>, <code>rdx</code>, <code>rcx</code>, <code>r8</code>, <code>r9</code><br><ul><li><strong>mnemonic</strong>: &ldquo;dizzy dixie 89&rdquo; -&gt; &ldquo;disi dxcx 89&quot;</li></ul></td>
+</tr>
+<tr>
+<td>argument passing (Windows)</td>
+<td><code>rcx</code>, <code>rdx</code>, <code>r8</code>, <code>r9</code><br><ul><li><strong>mnemonic</strong>: &ldquo;cd 89&quot;</li></ul></td>
+</tr>
+<tr>
+<td>return value</td>
+<td><code>rax</code></td>
+</tr>
+<tr>
+<td>syscall argument passing</td>
+<td><code>rdi</code>, <code>rsi</code>, <code>rdx</code>, <code>r10</code>, <code>r8</code>, <code>r9</code><br><ul><li><strong>mnemonic</strong>: &ldquo;dizzy dick 1089&rdquo; -&gt; &ldquo;disi dx 1089&quot;</li></ul></td>
+</tr>
+<tr>
+<td>syscall number</td>
+<td><code>rax</code></td>
+</tr>
+<tr>
+<td>syscall table</td>
+<td><a href="https://blog.rchapman.org/posts/Linux%5FSystem%5FCall%5FTable%5Ffor%5Fx86%5F64/">https://blog.rchapman.org/posts/Linux%5FSystem%5FCall%5FTable%5Ffor%5Fx86%5F64/</a></td>
+</tr>
+</tbody>
+</table>
 <h2 id="arm--32-bit">ARM (32-bit)</h2>
-<ul>
-<li>argument passing: <code>r0</code>-<code>r3</code></li>
-<li>return value: <code>r0</code></li>
-<li><code>r4</code>-<code>r11</code> are callee-save registers (<code>r9</code> may or may not be)</li>
-<li>syscall argument passing: <code>r0</code>-<code>r6</code></li>
-<li>syscall number: <code>r7</code></li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Topic</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>argument passing</td>
+<td><code>r0</code>-<code>r3</code></td>
+</tr>
+<tr>
+<td>return value</td>
+<td><code>r0</code></td>
+</tr>
+<tr>
+<td>callee-save registers</td>
+<td><code>r4</code>-<code>r11</code> (<code>r9</code> may or may not be)</td>
+</tr>
+<tr>
+<td>syscall argument passing</td>
+<td><code>r0</code>-<code>r6</code></td>
+</tr>
+<tr>
+<td>syscall number</td>
+<td><code>r7</code></td>
+</tr>
+</tbody>
+</table>
 <h2 id="arm--64-bit">ARM (64-bit)</h2>
-<ul>
-<li>argument passing: <code>r0</code>-<code>r7</code></li>
-<li>return value: <code>r0</code></li>
-<li><code>r19</code>-<code>r28</code> are callee-saved registers</li>
-<li>syscall argument passing: <code>r0</code>-<code>r5</code></li>
-<li>syscall number: <code>r8</code></li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Topic</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>argument passing</td>
+<td><code>r0</code>-<code>r7</code></td>
+</tr>
+<tr>
+<td>return value</td>
+<td><code>r0</code></td>
+</tr>
+<tr>
+<td>callee-save registers</td>
+<td><code>r19</code>-<code>r28</code></td>
+</tr>
+<tr>
+<td>syscall argument passing</td>
+<td><code>r0</code>-<code>r5</code></td>
+</tr>
+<tr>
+<td>syscall number</td>
+<td><code>r8</code></td>
+</tr>
+</tbody>
+</table>
 <h2 id="mips">MIPS</h2>
-<ul>
-<li>argument passing (O32): <code>a0</code>-<code>a3</code></li>
-<li>argument passing (N32/N64): <code>a0</code>-<code>a7</code></li>
-<li>return value(s): <code>v0</code>, <code>v1</code></li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Topic</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>argument passing (O32)</td>
+<td><code>a0</code>-<code>a3</code></td>
+</tr>
+<tr>
+<td>argument passing (N32/N64)</td>
+<td><code>a0</code>-<code>a7</code></td>
+</tr>
+<tr>
+<td>return value(s)</td>
+<td><code>v0</code>, <code>v1</code></td>
+</tr>
+</tbody>
+</table>
 <h2 id="risc-v">RISC-V</h2>
-<ul>
-<li>argument passing: <code>a0</code>-<code>a7</code></li>
-<li>return value(s): <code>a0</code>, <code>a1</code></li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Topic</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>argument passing</td>
+<td><code>a0</code>-<code>a7</code></td>
+</tr>
+<tr>
+<td>return value(s)</td>
+<td><code>a0</code>, <code>a1</code></td>
+</tr>
+</tbody>
+</table>
 <h2 id="powerpc--32-bit">PowerPC (32-bit)</h2>
-<ul>
-<li>argument passing: <code>gpr3</code>-<code>gpr10</code></li>
-<li>return value: <code>gpr3</code></li>
-<li><code>gpr3</code>-<code>gpr12</code> are caller-saved registers</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Topic</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>argument passing</td>
+<td><code>gpr3</code>-<code>gpr10</code></td>
+</tr>
+<tr>
+<td>return value</td>
+<td><code>gpr3</code></td>
+</tr>
+<tr>
+<td>caller-saved registers</td>
+<td><code>gpr3</code>-<code>gpr12</code></td>
+</tr>
+</tbody>
+</table>
 <h2 id="references">References</h2>
-<h3 id="x86">x86</h3>
-<ul>
-<li><a href="https://lospi.net/assembly/c/developing/software/2015/04/04/common-x86-calling-conventions.html">https://lospi.net/assembly/c/developing/software/2015/04/04/common-x86-calling-conventions.html</a> - more information on cdecl, stdcall, and fastcall</li>
-<li><a href="https://web.archive.org/web/20160907042308/http://docs.cs.up.ac.za/programming/asm/derick%5Ftut/syscalls.html">https://web.archive.org/web/20160907042308/http://docs.cs.up.ac.za/programming/asm/derick%5Ftut/syscalls.html</a> - syscall table for i386</li>
-</ul>
-<h3 id="x86-64">x86_64</h3>
-<ul>
-<li><a href="https://blog.rchapman.org/posts/Linux%5FSystem%5FCall%5FTable%5Ffor%5Fx86%5F64/">https://blog.rchapman.org/posts/Linux%5FSystem%5FCall%5FTable%5Ffor%5Fx86%5F64/</a> - syscall table for x86_64</li>
-<li><a href="https://stackoverflow.com/questions/2535989/what-are-the-calling-conventions-for-unix-linux-system-calls-on-i386-and-x86-6">https://stackoverflow.com/questions/2535989/what-are-the-calling-conventions-for-unix-linux-system-calls-on-i386-and-x86-6</a> - syscall information</li>
-</ul>
-<h3 id="arm">ARM</h3>
-<ul>
-<li><a href="https://stackoverflow.com/questions/261419/what-registers-to-save-in-the-arm-c-calling-convention">https://stackoverflow.com/questions/261419/what-registers-to-save-in-the-arm-c-calling-convention</a> - calling conventions for 32-bit and 64-bit ARM</li>
-<li><a href="https://jumpnowtek.com/shellcode/linux-arm-shellcode-part1.html">https://jumpnowtek.com/shellcode/linux-arm-shellcode-part1.html</a> - syscalls and shellcoding for ARM</li>
-<li><a href="https://man7.org/linux/man-pages/man2/syscall.2.html">https://man7.org/linux/man-pages/man2/syscall.2.html</a> - syscall register information for ARM, MIPS, RISC-V, etc.</li>
-</ul>
-<h3 id="mips">MIPS</h3>
-<ul>
-<li><a href="https://courses.cs.washington.edu/courses/cse378/09wi/lectures/lec05.pdf">https://courses.cs.washington.edu/courses/cse378/09wi/lectures/lec05.pdf</a> - calling convention for MIPS</li>
-</ul>
-<h3 id="powerpc">PowerPC</h3>
-<ul>
-<li><a href="https://developer.ibm.com/technologies/linux/articles/l-ppc/">https://developer.ibm.com/technologies/linux/articles/l-ppc/</a> - calling conventions for PowerPC</li>
-<li><a href="https://refspecs.linuxfoundation.org/ELF/ppc64/PPC-elf64abi.html#REG">https://refspecs.linuxfoundation.org/ELF/ppc64/PPC-elf64abi.html#REG</a> - register usage for 64-bit PowerPC</li>
-</ul>
-<h3 id="risc-v">RISC-V</h3>
-<ul>
-<li><a href="https://riscv.org/wp-content/uploads/2015/01/riscv-calling.pdf">https://riscv.org/wp-content/uploads/2015/01/riscv-calling.pdf</a> - calling convention for RISC-V</li>
-</ul>
+<table>
+<thead>
+<tr>
+<th>Architecture</th>
+<th>Links</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x86</td>
+<td><a href="https://lospi.net/assembly/c/developing/software/2015/04/04/common-x86-calling-conventions.html">https://lospi.net/assembly/c/developing/software/2015/04/04/common-x86-calling-conventions.html</a><br>- more information on cdecl, stdcall, and fastcall<br><a href="https://web.archive.org/web/20160907042308/http://docs.cs.up.ac.za/programming/asm/derick%5Ftut/syscalls.html%3E">https://web.archive.org/web/20160907042308/http://docs.cs.up.ac.za/programming/asm/derick%5Ftut/syscalls.html&gt;</a><br>- syscall table for i386</td>
+</tr>
+<tr>
+<td>x86_64</td>
+<td><a href="https://blog.rchapman.org/posts/Linux%5FSystem%5FCall%5FTable%5Ffor%5Fx86%5F64/">https://blog.rchapman.org/posts/Linux%5FSystem%5FCall%5FTable%5Ffor%5Fx86%5F64/</a><br>- syscall table for x86_64<br><a href="https://stackoverflow.com/questions/2535989/what-are-the-calling-conventions-for-unix-linux-system-calls-on-i386-and-x86-6">https://stackoverflow.com/questions/2535989/what-are-the-calling-conventions-for-unix-linux-system-calls-on-i386-and-x86-6</a><br>- syscall information</td>
+</tr>
+<tr>
+<td>ARM</td>
+<td><a href="https://stackoverflow.com/questions/261419/what-registers-to-save-in-the-arm-c-calling-convention">https://stackoverflow.com/questions/261419/what-registers-to-save-in-the-arm-c-calling-convention</a><br>- calling conventions for 32-bit and 64-bit ARM&lt;br</td>
+</tr>
+<tr>
+<td>MIPS</td>
+<td><a href="https://courses.cs.washington.edu/courses/cse378/09wi/lectures/lec05.pdf">https://courses.cs.washington.edu/courses/cse378/09wi/lectures/lec05.pdf</a><br>- calling convention for MIPS</td>
+</tr>
+<tr>
+<td>PowerPC</td>
+<td><a href="https://developer.ibm.com/technologies/linux/articles/l-ppc/">https://developer.ibm.com/technologies/linux/articles/l-ppc/</a><br>- calling conventions for PowerPC<br><a href="https://refspecs.linuxfoundation.org/ELF/ppc64/PPC-elf64abi.html#REG">https://refspecs.linuxfoundation.org/ELF/ppc64/PPC-elf64abi.html#REG</a><br>- register usage for 64-bit PowerPC</td>
+</tr>
+<tr>
+<td>RISC-V</td>
+<td><a href="https://riscv.org/wp-content/uploads/2015/01/riscv-calling.pdf">https://riscv.org/wp-content/uploads/2015/01/riscv-calling.pdf</a><br>- calling convention for RISC-V</td>
+</tr>
+</tbody>
+</table>
 
 </div>
 
@@ -278,7 +431,7 @@ x86  argument passing (cdecl): all arguments passed on the stack argument passin
       </li></ul>
   </nav>
 </section><div class='copyright'>
-  <p> &copy; 2020 Daniel Ting. Powered by <a href="https://gohugo.io/">Hugo</a> and <a href="https://github.com/achary/engimo">engimo</a>. <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img class="display-centered" alt="Creative Commons License" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a> </p>
+  <p> &copy; 2020-2021 Daniel Ting. Powered by <a href="https://gohugo.io/">Hugo</a> and <a href="https://github.com/achary/engimo">engimo</a>. <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img class="display-centered" alt="Creative Commons License" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a> </p>
 </div>
 
         </div>

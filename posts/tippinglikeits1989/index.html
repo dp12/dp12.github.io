@@ -2,18 +2,18 @@
 <html lang='en'><head>
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='Long ago in the 1980&#39;s, the geeks of yore wielded RPN calculators such as the HP-42S at the local diner. Calculating tips since has never been so cool.
+<meta name='description' content='Long ago in the 1980&rsquo;s, the geeks of yore wielded RPN calculators such as the HP-42S at the local diner. Calculating tips since has never been so cool.
 But what is RPN? RPN stands for &ldquo;Reverse Polish Notation&quot;, a syntax where operands are given before the operator. This is somewhat backwards compared to infix notation, which normal humans are used to, as well as prefix (aka &ldquo;Polish&rdquo;) notation, which is used in Lisp and other languages.'>
 <meta name='theme-color' content='#44ccff'>
 
 <meta property='og:title' content='Tipping like it&#39;s 1989 (or: emacs iPhone &lt;3) • Super Pork Chop'>
-<meta property='og:description' content='Long ago in the 1980&#39;s, the geeks of yore wielded RPN calculators such as the HP-42S at the local diner. Calculating tips since has never been so cool.
+<meta property='og:description' content='Long ago in the 1980&rsquo;s, the geeks of yore wielded RPN calculators such as the HP-42S at the local diner. Calculating tips since has never been so cool.
 But what is RPN? RPN stands for &ldquo;Reverse Polish Notation&quot;, a syntax where operands are given before the operator. This is somewhat backwards compared to infix notation, which normal humans are used to, as well as prefix (aka &ldquo;Polish&rdquo;) notation, which is used in Lisp and other languages.'>
 <meta property='og:url' content='http://www.example.com/posts/tippinglikeits1989/'>
 <meta property='og:site_name' content='Super Pork Chop'>
 <meta property='og:type' content='article'><meta property='article:section' content='posts'><meta property='article:tag' content='emacs'><meta property='article:tag' content='radare2'><meta property='article:tag' content='reddit'><meta property='article:tag' content='iSH'><meta property='article:published_time' content='2019-11-06T00:00:00-05:00'/><meta property='article:modified_time' content='2019-11-06T00:00:00-05:00'/><meta name='twitter:card' content='summary'>
 
-<meta name="generator" content="Hugo 0.62.2" />
+<meta name="generator" content="Hugo 0.68.3" />
 
   <title>Tipping like it&#39;s 1989 (or: emacs iPhone &lt;3) • Super Pork Chop</title>
   <link rel='canonical' href='http://www.example.com/posts/tippinglikeits1989/'>
@@ -33,7 +33,7 @@ But what is RPN? RPN stands for &ldquo;Reverse Polish Notation&quot;, a syntax w
   <div class='container'>
     
     <ul><li class='item'>
-        <a href='https://dp12.github.io/posts/' class="repository">
+        <a href='https://dp12.github.io/' class="repository">
           <span>Home</span>
         </a>
       </li><li class='item'>
@@ -108,23 +108,23 @@ But what is RPN? RPN stands for &ldquo;Reverse Polish Notation&quot;, a syntax w
   
 
   <div class='container entry-content'>
-  <p>Long ago in the 1980's, the geeks of yore wielded RPN calculators such as the HP-42S at the local diner. Calculating tips since has never been so cool.</p>
+  <p>Long ago in the 1980&rsquo;s, the geeks of yore wielded RPN calculators such as the HP-42S at the local diner. Calculating tips since has never been so cool.</p>
 <p>But what is RPN? RPN stands for &ldquo;<a href="https://en.wikipedia.org/wiki/Reverse_Polish_notation">Reverse Polish Notation</a>&quot;, a syntax where operands are given before the operator. This is somewhat backwards compared to infix notation, which normal humans are used to, as well as prefix (aka &ldquo;Polish&rdquo;) notation, which is used in Lisp and other languages. Some examples:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># prefix notation (Lisp)</span>
 <span style="color:#f92672">(</span>+ <span style="color:#ae81ff">2</span> 4<span style="color:#f92672">)</span>
 <span style="color:#75715e"># infix notation (humans)</span>
-<span style="color:#ae81ff">2</span> + 4
+<span style="color:#ae81ff">2</span> + <span style="color:#ae81ff">4</span>
 <span style="color:#75715e"># reverse polish notation (Forth)</span>
 <span style="color:#ae81ff">2</span> <span style="color:#ae81ff">4</span> +
-</code></pre></div><p>Who would do such a terrible thing? Surprisingly, there are some tangible benefits to RPN. Arithmetic expressions in RPN don't need parentheses, leading to faster input due to fewer keystrokes. Various studies also show RPN calculator users routinely beat out their infix-using counterparts in speed tests.</p>
+</code></pre></div><p>Who would do such a terrible thing? Surprisingly, there are some tangible benefits to RPN. Arithmetic expressions in RPN don&rsquo;t need parentheses, leading to faster input due to fewer keystrokes. Various studies also show RPN calculator users routinely beat out their infix-using counterparts in speed tests.</p>
 <p>Nowadays, traces of RPN are hard to find. They exist only in HP-42 emulators and in song, and occasionally when Yoda has something to say in the latest Star Wars movie.</p>
-<p>But weep no longer friends, for RPN calculations are back on the iPhone with everyone's favorite editor, emacs!</p>
+<p>But weep no longer friends, for RPN calculations are back on the iPhone with everyone&rsquo;s favorite editor, emacs!</p>
 <h2 id="emacs-on-the-iphone">Emacs on the iPhone</h2>
-<p>iOS has a shiny new shell called iSH which is essentially a 32-bit emulator for Alpine Linux. Since it is still in beta, it may be installed using Apple's <a href="https://testflight.apple.com/">TestFlight</a> app (used for beta testing apps).
+<p>iOS has a shiny new shell called iSH which is essentially a 32-bit emulator for Alpine Linux. Since it is still in beta, it may be installed using Apple&rsquo;s <a href="https://testflight.apple.com/">TestFlight</a> app (used for beta testing apps).
 Install it with the following steps:</p>
 <ol>
 <li>Install TestFlight on your iPhone using the AppStore.</li>
-<li>Open up <a href="https://ish.app/">https://ish.app/</a> in your iPhone's browser.</li>
+<li>Open up <a href="https://ish.app/">https://ish.app/</a> in your iPhone&rsquo;s browser.</li>
 <li>Scroll down and tap the TestFlight icon to accept the invite for the beta iSH app and install it.</li>
 </ol>
 <p>The next order of business is getting emacs - it has a suprisingly advanced RPN calculator called <a href="https://www.gnu.org/software/emacs/manual/html_node/calc/">calc</a>. Run the following in the iSH shell to install emacs:</p>
@@ -134,7 +134,7 @@ Install it with the following steps:</p>
 chmod u+x emacscalc.sh
 mv emacscalc.sh /usr/bin/ec
 </code></pre></div><p>Voila! You now can launch emacscalc by running <code>ec</code>. Now how about calculating that tip?</p>
-<p>Since emacs calc is an RPN calculator, you first need to push the operands on the stack, and then complete the computation by entering the operator. So to calculate a run-of-the-mill 18% tip on $8.35, we'd enter the following:</p>
+<p>Since emacs calc is an RPN calculator, you first need to push the operands on the stack, and then complete the computation by entering the operator. So to calculate a run-of-the-mill 18% tip on $8.35, we&rsquo;d enter the following:</p>
 <p><code>8.35</code> <code>RET</code> <code>1.18</code> <code>RET</code> <code>*</code></p>
 <img src="/emacscalc.png" title="emacscalc in action" style="width:60%;">
 <p>Here are a few other basic commands that can be useful:</p>
@@ -158,10 +158,10 @@ mv emacscalc.sh /usr/bin/ec
 <h2 id="bonus-reddit-and-reverse-engineering">BONUS: Reddit and Reverse Engineering</h2>
 <p><a href="https://github.com/radareorg/radare2">radare2</a> is a fun reverse engineering framework with powerful features and a vertical learning curve. Surprisingly, you can get it on your iPhone as well. Just run:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">apk add radare2
-</code></pre></div><p>It segfaults on executables of any real size, but try something smaller and you're off to the races!</p>
+</code></pre></div><p>It segfaults on executables of any real size, but try something smaller and you&rsquo;re off to the races!</p>
 <img src="/radare2.png" title="debugging vimtutor with radare2" style="width:60%;">
-<p>But wait, there's more!</p>
-<p>For command-line fans of every stripe, there's a highly functional reddit
+<p>But wait, there&rsquo;s more!</p>
+<p>For command-line fans of every stripe, there&rsquo;s a highly functional reddit
 browser called <a href="https://github.com/michael-lazar/rtv">rtv</a>. So functional, in fact, that I prefer using it instead of my browser.</p>
 <p>Install rtv with:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">apk add py-pip
@@ -243,7 +243,7 @@ echo <span style="color:#e6db74">&#34;alias rtvs=&#39;rtv -s emacs+cpp+python+pr
       </li></ul>
   </nav>
 </section><div class='copyright'>
-  <p> &copy; 2020 Daniel Ting. Powered by <a href="https://gohugo.io/">Hugo</a> and <a href="https://github.com/achary/engimo">engimo</a>. <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img class="display-centered" alt="Creative Commons License" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a> </p>
+  <p> &copy; 2020-2021 Daniel Ting. Powered by <a href="https://gohugo.io/">Hugo</a> and <a href="https://github.com/achary/engimo">engimo</a>. <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img class="display-centered" alt="Creative Commons License" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a> </p>
 </div>
 
         </div>

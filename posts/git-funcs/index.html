@@ -2,22 +2,22 @@
 <html lang='en'><head>
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='Many developers, new and old, curse git from the depths of their bowels. However, once you get past the learning curve, it&#39;s surprisingly fun to tinker and automate common git tasks. The following are a collection of bash functions and aliases that accelerate my workflow considerably:
+<meta name='description' content='Many developers, new and old, curse git from the depths of their bowels. However, once you get past the learning curve, it&rsquo;s surprisingly fun to tinker and automate common git tasks. The following are a collection of bash functions and aliases that accelerate my workflow considerably:
 glS &ldquo;git pickaxe with filter&rdquo;
 A lot of magic occurs when you combine fuzzy finders with git. But first,
-@@@@@@@@^_^@@@@@@@@@@@@WAKE UP SHEEPLEWAKE UP SHEEPLEWAKE UP SHEEPLE You can search the diffs of all your commits with git log -G or git log -S.'>
+@@@@@@@ @^_^@@@@@ @@@@@@@ WAKE UP SHEEPLE WAKE UP SHEEPLE WAKE UP SHEEPLE  You can search the diffs of all your commits with git log -G or git log -S.'>
 <meta name='theme-color' content='#44ccff'>
 
 <meta property='og:title' content='Woah, git just wanna have func • Super Pork Chop'>
-<meta property='og:description' content='Many developers, new and old, curse git from the depths of their bowels. However, once you get past the learning curve, it&#39;s surprisingly fun to tinker and automate common git tasks. The following are a collection of bash functions and aliases that accelerate my workflow considerably:
+<meta property='og:description' content='Many developers, new and old, curse git from the depths of their bowels. However, once you get past the learning curve, it&rsquo;s surprisingly fun to tinker and automate common git tasks. The following are a collection of bash functions and aliases that accelerate my workflow considerably:
 glS &ldquo;git pickaxe with filter&rdquo;
 A lot of magic occurs when you combine fuzzy finders with git. But first,
-@@@@@@@@^_^@@@@@@@@@@@@WAKE UP SHEEPLEWAKE UP SHEEPLEWAKE UP SHEEPLE You can search the diffs of all your commits with git log -G or git log -S.'>
+@@@@@@@ @^_^@@@@@ @@@@@@@ WAKE UP SHEEPLE WAKE UP SHEEPLE WAKE UP SHEEPLE  You can search the diffs of all your commits with git log -G or git log -S.'>
 <meta property='og:url' content='http://www.example.com/posts/git-funcs/'>
 <meta property='og:site_name' content='Super Pork Chop'>
 <meta property='og:type' content='article'><meta property='article:section' content='posts'><meta property='article:tag' content='git'><meta property='article:published_time' content='2019-10-11T00:00:32-04:00'/><meta property='article:modified_time' content='2019-10-11T00:00:32-04:00'/><meta name='twitter:card' content='summary'>
 
-<meta name="generator" content="Hugo 0.62.2" />
+<meta name="generator" content="Hugo 0.68.3" />
 
   <title>Woah, git just wanna have func • Super Pork Chop</title>
   <link rel='canonical' href='http://www.example.com/posts/git-funcs/'>
@@ -37,7 +37,7 @@ A lot of magic occurs when you combine fuzzy finders with git. But first,
   <div class='container'>
     
     <ul><li class='item'>
-        <a href='https://dp12.github.io/posts/' class="repository">
+        <a href='https://dp12.github.io/' class="repository">
           <span>Home</span>
         </a>
       </li><li class='item'>
@@ -112,7 +112,7 @@ A lot of magic occurs when you combine fuzzy finders with git. But first,
   
 
   <div class='container entry-content'>
-  <p>Many developers, new and old, curse git from the depths of their bowels. However, once you get past the learning curve, it's surprisingly fun to tinker and automate common git tasks. The following are a collection of bash functions and aliases that accelerate my workflow considerably:</p>
+  <p>Many developers, new and old, curse git from the depths of their bowels. However, once you get past the learning curve, it&rsquo;s surprisingly fun to tinker and automate common git tasks. The following are a collection of bash functions and aliases that accelerate my workflow considerably:</p>
 <h2 id="gls">glS</h2>
 <p><em>&ldquo;git pickaxe with filter&rdquo;</em></p>
 <p>A lot of magic occurs when you combine fuzzy finders with git.
@@ -144,7 +144,7 @@ alias glz='git log $(git branch --sort=&quot;-authordate&quot; | fzy)'
 </code></pre>
 <h2 id="gla">gla</h2>
 <p><em>&ldquo;git log by author, simplified&rdquo;</em></p>
-<p>Many times, it's useful to see a list of all of the commits from a particular person. The following function allows you to specify a particular author. If no author is specified, it defaults to showing commits made by you.</p>
+<p>Many times, it&rsquo;s useful to see a list of all of the commits from a particular person. The following function allows you to specify a particular author. If no author is specified, it defaults to showing commits made by you.</p>
 <pre><code># Example:
 #     gla jsmith
 #
@@ -156,7 +156,7 @@ gla() {
 </code></pre>
 <h2 id="gpb">gPb</h2>
 <p><em>&ldquo;git push current branch&rdquo;</em></p>
-<p>For the same reasons as above, it's nice to have a faster way of pushing out branches with long names. This command will push out the current branch you're on (assuming your remote is origin). To delete the branch, just append <code>--delete</code>.</p>
+<p>For the same reasons as above, it&rsquo;s nice to have a faster way of pushing out branches with long names. This command will push out the current branch you&rsquo;re on (assuming your remote is origin). To delete the branch, just append <code>--delete</code>.</p>
 <pre><code># Example:
 #     gPb --delete
 #
@@ -223,7 +223,7 @@ gcfu() {
 <h1 id="bonus">BONUS:</h1>
 <h2 id="grrauth">grrauth</h2>
 <p><em>&ldquo;Rewrite author/committer in history, the bash function way!&quot;</em></p>
-<p>Have you ever misconfigured your name and email and then made a series of commits? Github supplies a <a href="https://help.github.com/articles/changing-author-info/">handy script</a> to fix it for you. But if you want to execute the script, you have to copy it to every repo you want to do the change in and then execute it. I think it's much easier to deploy as a bash function, so I converted the script into one. If no arguments other than the old email are given, it pulls the new username and email from your git config.</p>
+<p>Have you ever misconfigured your name and email and then made a series of commits? Github supplies a <a href="https://help.github.com/articles/changing-author-info/">handy script</a> to fix it for you. But if you want to execute the script, you have to copy it to every repo you want to do the change in and then execute it. I think it&rsquo;s much easier to deploy as a bash function, so I converted the script into one. If no arguments other than the old email are given, it pulls the new username and email from your git config.</p>
 <pre><code># Example:
 #     grrauth wrong-email@mymail.com
 #
@@ -316,7 +316,7 @@ grrauth() {
       </li></ul>
   </nav>
 </section><div class='copyright'>
-  <p> &copy; 2020 Daniel Ting. Powered by <a href="https://gohugo.io/">Hugo</a> and <a href="https://github.com/achary/engimo">engimo</a>. <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img class="display-centered" alt="Creative Commons License" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a> </p>
+  <p> &copy; 2020-2021 Daniel Ting. Powered by <a href="https://gohugo.io/">Hugo</a> and <a href="https://github.com/achary/engimo">engimo</a>. <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img class="display-centered" alt="Creative Commons License" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a> </p>
 </div>
 
         </div>

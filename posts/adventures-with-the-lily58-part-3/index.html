@@ -11,7 +11,7 @@
 <meta property='og:site_name' content='Super Pork Chop'>
 <meta property='og:type' content='article'><meta property='article:section' content='posts'><meta property='article:tag' content='lily58'><meta property='article:tag' content='keyboard'><meta property='article:published_time' content='2020-01-23T00:00:00-05:00'/><meta property='article:modified_time' content='2020-01-23T00:00:00-05:00'/><meta name='twitter:card' content='summary'>
 
-<meta name="generator" content="Hugo 0.62.2" />
+<meta name="generator" content="Hugo 0.68.3" />
 
   <title>Adventures with the Lily58 #3: Return of the M-key • Super Pork Chop</title>
   <link rel='canonical' href='http://www.example.com/posts/adventures-with-the-lily58-part-3/'>
@@ -31,7 +31,7 @@
   <div class='container'>
     
     <ul><li class='item'>
-        <a href='https://dp12.github.io/posts/' class="repository">
+        <a href='https://dp12.github.io/' class="repository">
           <span>Home</span>
         </a>
       </li><li class='item'>
@@ -107,20 +107,48 @@
 
   <div class='container entry-content'>
   <p>In the last build log, I was stuck with three dead switches on the right side of the keyboard. Using my pliers and pulling hard, I extracted all three of them. For two of them, I saw the problem immediately. One of the two pins on the switches was bent. They were easily bent back into shape with pliers. Then, I re-inserted them into their hotswap sockets. They started working with no further complaints.</p>
-<p>The third switch, the <code>M</code> key, was a tougher cookie. None of its pins were bent. However, its diode was a bit of a hack job when I installed it, so I assumed that was the problem. Since its leads broke off, I had just soldered it to the top side instead of pulling its leads through to the bottom side. First, I tried reflowing the solder to make sure the diode had a good connection. Nothing happened. I tried replacing the diode, which also didn't work. I then reflowed the solder on the hotswap socket and tested the connections using the multimeter in connectivity mode, and all the connections looked good. Even stranger, when the keyboard first powered up, the left OLED reported that the <code>M</code> key had been pressed.</p>
+<p>The third switch, the <code>M</code> key, was a tougher cookie. None of its pins were bent. However, its diode was a bit of a hack job when I installed it, so I assumed that was the problem. Since its leads broke off, I had just soldered it to the top side instead of pulling its leads through to the bottom side. First, I tried reflowing the solder to make sure the diode had a good connection. Nothing happened. I tried replacing the diode, which also didn&rsquo;t work. I then reflowed the solder on the hotswap socket and tested the connections using the multimeter in connectivity mode, and all the connections looked good. Even stranger, when the keyboard first powered up, the left OLED reported that the <code>M</code> key had been pressed.</p>
 <p>At this point, I was scratching my head and wondering if I had somehow gotten a bad PCB. Then, I saw that someone recommended testing the connections going back to the micro. Using the multimeter in connectivity mode, I found that on good switches, one side of the socket was connected to a single pin on the micro. The same was true for my bad switch, but upon looking at the pins on the micro more closely, I discovered the root of the problem.</p>
-<p>To allow the PCB to be reversible, there is an adjacent line of holes very close to where the micro's pins go into the PCB. One of the pins looked like it had excess solder, perhaps enough to touch the adjacent hole.</p>
+<p>To allow the PCB to be reversible, there is an adjacent line of holes very close to where the micro&rsquo;s pins go into the PCB. One of the pins looked like it had excess solder, perhaps enough to touch the adjacent hole.</p>
 <img src="/lily58-part3-1.png" title="problem pins" style="width:75%;">
 <p>Upon using a multimeter, I discovered that this was indeed the case. A few swipes of the soldering iron broke the connection, and the key finally started working!</p>
 <img src="/lily58-part3-2.png" title="testing connections with a multimeter" style="width:75%;">
-<p>From there, it was just a matter of getting some saner keybindings. The Lily58's default firmware has four pre-defined layers:</p>
-<ul>
-<li><code>QWERTY</code>: default layer</li>
-<li><code>LOWER</code>: custom layer entered by holding the <code>LOWER</code> thumb key on the left half of the keyboard</li>
-<li><code>RAISE</code>: custom layer entered by holding the <code>RAISE</code> thumb key on the right half of the keyboard</li>
-<li><code>ADJUST</code>: a layer with settings for RGB backlighting</li>
-</ul>
-<p>It's hard enough adjusting to an ergo keyboard's layout, so I went through a flurry of remappings:</p>
+<p>From there, it was just a matter of getting some saner keybindings. The Lily58&rsquo;s default firmware has four pre-defined layers:</p>
+<style>
+table th:first-of-type {
+    width: 15%;
+}
+table th:nth-of-type(2) {
+    width: 85%;
+}
+</style>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>QWERTY</code></td>
+<td>default layer</td>
+</tr>
+<tr>
+<td><code>LOWER</code></td>
+<td>custom layer entered by holding the <code>LOWER</code> thumb key on the left half of the keyboard</td>
+</tr>
+<tr>
+<td><code>RAISE</code></td>
+<td>custom layer entered by holding the <code>RAISE</code> thumb key on the right half of the keyboard</td>
+</tr>
+<tr>
+<td><code>ADJUST</code></td>
+<td>a layer with settings for RGB backlighting</td>
+</tr>
+</tbody>
+</table>
+<p>It&rsquo;s hard enough adjusting to an ergo keyboard&rsquo;s layout, so I went through a flurry of remappings:</p>
 <ul>
 <li>Swap <code>Shift</code> and <code>Ctrl</code> on the left half of the keyboard</li>
 <li>Turn the upper right key into backspace</li>
@@ -132,18 +160,18 @@
 <li>Add WASD gaming-style arrow keys to the <code>LOWER</code> layer on the left side of the keyboard.</li>
 <li>Add keybindings for <code>|</code>, <code>~</code>, and <code>`</code> on the upper corners of the <code>RAISE</code>/<code>LOWER</code> layers</li>
 </ul>
-<p>Here's how it looked after the dust settled.</p>
+<p>Here&rsquo;s how it looked after the dust settled.</p>
 <img src="/lily58-part3-3.png" title="keymappings on all layers" style="width:100%;">
-<p>Even after the remappings, I was having trouble getting used to the keyboard layout. Normal keyboards shift the &ldquo;qwertyuiop&rdquo; and &ldquo;zxcvbnm&rdquo; rows left and right relative to the &ldquo;asdfghjkl&rdquo; row, but the Lily58's rows are all non-staggered. It took a few weeks to get used to it.</p>
+<p>Even after the remappings, I was having trouble getting used to the keyboard layout. Normal keyboards shift the &ldquo;qwertyuiop&rdquo; and &ldquo;zxcvbnm&rdquo; rows left and right relative to the &ldquo;asdfghjkl&rdquo; row, but the Lily58&rsquo;s rows are all non-staggered. It took a few weeks to get used to it.</p>
 <p>Since the &ldquo;Lily58&rdquo; sounded insufficiently awesome for a keyboard of this class, I decided to christen it the &ldquo;BOUNTY HUNTER 58&rdquo;, and I edited the graphic in Paint to reflect this.</p>
 <img src="/lily58-part3-4.png" title="modified logo" style="width:50%;">
-<p>As icing on the cake, I added a magnetic micro-USB connector and 3M rubber feet so the keyboard halves wouldn't slide all over the place. I also found a budget set of Aurebesh keycaps on Aliexpress to match the Star Wars theme. Here's the finished product in all its glory.</p>
+<p>As icing on the cake, I added a magnetic micro-USB connector and 3M rubber feet so the keyboard halves wouldn&rsquo;t slide all over the place. I also found a budget set of Aurebesh keycaps on Aliexpress to match the Star Wars theme. Here&rsquo;s the finished product in all its glory.</p>
 <img src="/lily58-part3-5.png" title="the assembled keyboard" style="width:100%;">
 <p>Some final thoughts:</p>
 <ul>
-<li>Unfortunately, the RGB backlighting can't be seen very easily on this build due to the black pcb plates.</li>
+<li>Behold, the lights shine wonderfully. But only if you&rsquo;re typing in a dark cave. Sandwiching RGB LEDs between two black pcb plates doesn&rsquo;t produce the optimal effect, so the backlighting can&rsquo;t be seen very easily on this build.</li>
 <li>I started off with Hako Clear switches, but quickly realized that the high actuation force was taxing on the fingers. After switching to Hako Violet switches, the keyboard felt much easier to use.</li>
-<li>Although the ergo keyboard layout is unconventional for those coming from standard keyboards, muscle memory can be acquired fast. The first thing I got used to was the unusual placement of the backspace key under the right thumb, and now I'm tempted to go for it there on regular keyboards as well.</li>
+<li>Although the ergo keyboard layout is unconventional for those coming from standard keyboards, muscle memory can be acquired fast. The first thing I got used to was the unusual placement of the backspace key under the right thumb, and now I&rsquo;m tempted to go for it there on regular keyboards as well.</li>
 </ul>
 <p>To be honest, I think it looks a little bit like this <a href="https://ftl.fandom.com/wiki/AI-Controlled_Rebel_Ships#Auto-Scout">drone ship</a> from FTL:</p>
 <img src="/lily58-part3-6.png" title="FTL autoscout" style="width:50%;">
@@ -218,7 +246,7 @@
       </li></ul>
   </nav>
 </section><div class='copyright'>
-  <p> &copy; 2020 Daniel Ting. Powered by <a href="https://gohugo.io/">Hugo</a> and <a href="https://github.com/achary/engimo">engimo</a>. <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img class="display-centered" alt="Creative Commons License" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a> </p>
+  <p> &copy; 2020-2021 Daniel Ting. Powered by <a href="https://gohugo.io/">Hugo</a> and <a href="https://github.com/achary/engimo">engimo</a>. <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img class="display-centered" alt="Creative Commons License" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a> </p>
 </div>
 
         </div>

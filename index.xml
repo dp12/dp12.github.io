@@ -16,7 +16,7 @@
       <pubDate>Fri, 14 Aug 2020 00:00:00 -0400</pubDate>
       
       <guid>http://www.example.com/posts/inctf20-archride-writeup/</guid>
-      <description>This past month, I played InCTF, a mid-level CTF organized by India&#39;s premier team, bi0s. I managed to solve one challenge called ArchRide - my first solve of a 1000-point challenge.
+      <description>This past month, I played InCTF, a mid-level CTF organized by India&amp;rsquo;s premier team, bi0s. I managed to solve one challenge called ArchRide - my first solve of a 1000-point challenge.
 The file given is a bzip that contains an ELF. Loading the ELF into Ghidra, we see a simple main function that reads a 14-character key and runs it through two check function. If the checks pass, the binary will print &amp;ldquo;Surprise!</description>
     </item>
     
@@ -28,7 +28,7 @@ The file given is a bzip that contains an ELF. Loading the ELF into Ghidra, we s
       <guid>http://www.example.com/posts/calling-conventions-for-pwn-and-profit/</guid>
       <description>Shellcoders and reverse engineers often need intimate knowledge of the registers used in calling functions and syscalls. This is a compressed cheatsheet of some of the most important conventions with a light sprinkling of mnemonics and links to more detailed information.
 NOTE: If there are more arguments than registers listed, the remaining arguments are passed on the stack (from right-to-left). Syscall information given is for Linux.
-x86  argument passing (cdecl): all arguments passed on the stack argument passing (stdcall): all arguments passed on the stack argument passing (fastcall): ecx, edx argument passing (thiscall): ecx gets &amp;ldquo;this&amp;rdquo; pointer; other arguments passed on the stack return value: eax syscall argument passing: ebx, ecx, edx, esi, edi, ebp  mnemonic: bcd sdb (&amp;ldquo;bcd is super dumb binary&amp;rdquo;)   syscall number: eax syscall table  x86_64  argument passing (Linux): rdi, rsi, rdx, rcx, r8, r9  mnemonic: &amp;ldquo;dizzy dixie 89&amp;rdquo; -&amp;gt; &amp;ldquo;disi dxcx 89&amp;rdquo;   argument passing (Windows): rcx, rdx, r8, r9 return value: rax syscall argument passing: rdi, rsi, rdx, r10, r8, r9  mnemonic: &amp;ldquo;dizzy dick 1089&amp;rdquo; -&amp;gt; &amp;ldquo;disi dx 1089&amp;rdquo;   syscall number: rax syscall table  ARM (32-bit)  argument passing: r0-r3 return value: r0 r4-r11 are callee-save registers (r9 may or may not be) syscall argument passing: r0-r6 syscall number: r7  ARM (64-bit)  argument passing: r0-r7 return value: r0 r19-r28 are callee-saved registers syscall argument passing: r0-r5 syscall number: r8  MIPS  argument passing (O32): a0-a3 argument passing (N32/N64): a0-a7 return value(s): v0, v1  RISC-V  argument passing: a0-a7 return value(s): a0, a1  PowerPC (32-bit)  argument passing: gpr3-gpr10 return value: gpr3 gpr3-gpr12 are caller-saved registers  References x86  https://lospi.</description>
+ table th:first-of-type { width: 30%; } table th:nth-of-type(2) { width: 70%; }  x86    Topic Description     argument passing (cdecl) all arguments passed on the stack   argument passing (stdcall) all arguments passed on the stack   argument passing (fastcall) ecx, edx   argument passing (thiscall) ecx gets &amp;ldquo;this&amp;rdquo; pointer; other arguments passed on the stack   return value eax   syscall argument passing ebx, ecx, edx, esi, edi, ebp</description>
     </item>
     
     <item>
@@ -47,7 +47,7 @@ x86  argument passing (cdecl): all arguments passed on the stack argument passin
       
       <guid>http://www.example.com/posts/adventures-with-the-lily58-part-2/</guid>
       <description>In the first part of this series, I went through the process of selecting a split keyboard. I decided to go with the Lily58. Now that the PCBs had arrived, I began to assemble the keyboard with some trepidation. The following build guides were quite helpful:
- kata0518&#39;s buildguide_en.md - the original build guide  I found out too late that the keyhive build guide I was using was outdated and missing some pictures.</description>
+ kata0518&amp;rsquo;s buildguide_en.md - the original build guide  I found out too late that the keyhive build guide I was using was outdated and missing some pictures.</description>
     </item>
     
     <item>
@@ -66,7 +66,7 @@ Upon landing my first job, I bought my first mech keyboard, a KeyCool 84 with ea
       <pubDate>Wed, 06 Nov 2019 00:00:00 -0500</pubDate>
       
       <guid>http://www.example.com/posts/tippinglikeits1989/</guid>
-      <description>Long ago in the 1980&#39;s, the geeks of yore wielded RPN calculators such as the HP-42S at the local diner. Calculating tips since has never been so cool.
+      <description>Long ago in the 1980&amp;rsquo;s, the geeks of yore wielded RPN calculators such as the HP-42S at the local diner. Calculating tips since has never been so cool.
 But what is RPN? RPN stands for &amp;ldquo;Reverse Polish Notation&amp;quot;, a syntax where operands are given before the operator. This is somewhat backwards compared to infix notation, which normal humans are used to, as well as prefix (aka &amp;ldquo;Polish&amp;rdquo;) notation, which is used in Lisp and other languages.</description>
     </item>
     
@@ -76,10 +76,10 @@ But what is RPN? RPN stands for &amp;ldquo;Reverse Polish Notation&amp;quot;, a 
       <pubDate>Fri, 11 Oct 2019 00:00:32 -0400</pubDate>
       
       <guid>http://www.example.com/posts/git-funcs/</guid>
-      <description>Many developers, new and old, curse git from the depths of their bowels. However, once you get past the learning curve, it&#39;s surprisingly fun to tinker and automate common git tasks. The following are a collection of bash functions and aliases that accelerate my workflow considerably:
+      <description>Many developers, new and old, curse git from the depths of their bowels. However, once you get past the learning curve, it&amp;rsquo;s surprisingly fun to tinker and automate common git tasks. The following are a collection of bash functions and aliases that accelerate my workflow considerably:
 glS &amp;ldquo;git pickaxe with filter&amp;rdquo;
 A lot of magic occurs when you combine fuzzy finders with git. But first,
-@@@@@@@@^_^@@@@@@@@@@@@WAKE UP SHEEPLEWAKE UP SHEEPLEWAKE UP SHEEPLE You can search the diffs of all your commits with git log -G or git log -S.</description>
+@@@@@@@ @^_^@@@@@ @@@@@@@ WAKE UP SHEEPLE WAKE UP SHEEPLE WAKE UP SHEEPLE  You can search the diffs of all your commits with git log -G or git log -S.</description>
     </item>
     
     <item>
@@ -88,10 +88,10 @@ A lot of magic occurs when you combine fuzzy finders with git. But first,
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://www.example.com/about/</guid>
-      <description>Hi, I&#39;m Daniel Ting! Welcome to Super Pork Chop, my blog.
+      <description>Hi, I&amp;rsquo;m Daniel Ting! Welcome to Super Pork Chop, my blog.
 As a senior worker bee in a distant land of fire and ice, I teach young roombas the errors of their ways, so they may one day be released into the wild.
-My interests lie in computer security, embedded systems programming, and emacs, and I&#39;m frequently attracted to the new and shiny.
-These posts are a rambling collection of things that I&#39;ve learned, and I hope you&#39;ll learn something new as well.</description>
+My interests lie in computer security, embedded systems programming, and emacs, and I&amp;rsquo;m frequently attracted to the new and shiny.
+These posts are a rambling collection of things that I&amp;rsquo;ve learned, and I hope you&amp;rsquo;ll learn something new as well.</description>
     </item>
     
   </channel>
